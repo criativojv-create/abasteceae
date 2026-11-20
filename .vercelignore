@@ -1,0 +1,9 @@
+tools
+.claude
+AUDITORIA.md
+figma-fiel.html
+figma-fiel.css
+styles.css
+assets/galeria/PROMPTS.md
+.env*
+.gitignore

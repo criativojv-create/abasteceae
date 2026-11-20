@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AbasteceAê · Diagnóstico gratuito de CMV para pizzarias</title>
+<meta name="description" content="A AbasteceAê cruza vendas e estoque para mostrar onde o consumo de ingredientes pode estar comendo o lucro da sua pizzaria.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/ttf" href="assets/fonts/InstrumentSans-Variable.ttf" crossorigin>
+<link rel="preload" as="image" href="assets/hero-laptop.png">
+<link rel="stylesheet" href="site.css?v=32">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a href="#topo" class="logo" aria-label="AbasteceAê, início"><img src="assets/logo-marca.png" alt="" width="40" height="39"><span>Abastece<b>Aê</b></span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#prejuizo">Prejuízo</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#whatsapp">No WhatsApp</a>
+      <a href="#teste">Teste</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a href="#diagnostico" class="btn btn--primary header__cta">Quero meu diagnóstico gratuito<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="topo">
+
+<!-- 1. Hero -->
+<section class="hero">
+  <div class="hero__bg"><img src="assets/bg-etereo.jpg" alt="" width="2752" height="1536"></div>
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <h1 class="h1">Seu negócio vende bem. <span class="accent">Então por que sobra tão pouco?</span></h1>
+        <p class="lead">A AbasteceAê cruza suas vendas com o estoque e mostra, todo dia, <b class="hl">quanto dinheiro está escapando</b>, onde e o que fazer. Você <b class="hl">recupera margem sem vender uma pizza a mais.</b></p>
+        <span id="hero-cta"><a href="#diagnostico" class="btn btn--primary">Quero meu diagnóstico gratuito<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></span>
+      </div>
+      <div class="hero__media"><div class="frame"><img src="assets/hero-laptop.png" alt="Painel da AbasteceAê aberto em um notebook, com CMV e desperdício do mês" width="799" height="867" fetchpriority="high"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Números: metade sobre o hero, metade sobre a seção seguinte -->
+<div class="stats-band">
+  <div class="wrap">
+    <ul class="stats">
+      <li class="stat"><span class="chip">CMV</span><b class="stat__value num">5&nbsp;pts</b><p class="small">acima do ideal já bastam para virar prejuízo</p></li>
+      <li class="stat"><span class="chip">Por mês</span><b class="stat__value num">R$&nbsp;5.000</b><p class="small">parados no estoque de quem fatura R$&nbsp;100 mil</p></li>
+      <li class="stat"><span class="chip">Por ano</span><b class="stat__value num">R$&nbsp;60.000</b><p class="small">que já eram seus. Só faltava enxergar.</p></li>
+      <li class="stat"><span class="chip">Diagnóstico</span><b class="stat__value num">24&nbsp;h</b><p class="small">é o prazo da sua análise gratuita de CMV</p></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 2. Prejuízo -->
+<section class="sec prejuizo" id="prejuizo">
+  <div class="conta__bg" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="prejuizo__text">
+      <h2 class="h2">O dinheiro não some do caixa. <span class="accent">Some do estoque.</span></h2>
+      <p class="lead">Você sabe quanto faturou ontem. Sabe quantas pizzas saíram. Mas quase nenhuma pizzaria sabe quanto de ingrediente <b>deveria</b> ter saído para fazer essas pizzas, e <b class="hl">quanto saiu de verdade.</b></p>
+      <p class="lead">Sem essa resposta, desperdício, furo de estoque, mão pesada e meio a meio mal cobrado viram prejuízo todo mês. E nunca aparece como perda. Aparece como <b class="hl">lucro que não veio.</b></p>
+    </div>
+    <div class="prejuizo__media"><img src="assets/seta-prejuizo-recorte.png" alt="Seta para baixo com o alerta de prejuízo de R$ 5.000" width="1456" height="1200" loading="lazy"></div>
+  </div>
+</section>
+
+<div class="sobrepoe"><!-- galeria fica presa só enquanto "Como funciona" passa por cima -->
+<!-- 3. Galeria: os cinco ralos do estoque (imagens Nano Banana 2.1, prompts em assets/galeria/PROMPTS.md) -->
+<section class="galeria" aria-label="Por onde o lucro escapa">
+  <div class="galeria__row">
+    <figure class="slot"><img src="assets/galeria/desperdicio.jpg" alt="Pizzaiolo preocupado vendo massa, molho e queijo caírem no lixo" width="725" height="900" loading="lazy">
+      <figcaption><div class="slot__head"><span class="slot__n">01</span><h3 class="slot__title">Desperdício</h3></div><div class="slot__foot"><p>Massa, molho e queijo que vão para o lixo no fim da noite.</p><a href="#diagnostico" class="slot__link">Ver na minha<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div></figcaption></figure>
+    <figure class="slot"><img src="assets/galeria/furo-estoque.jpg" alt="Prateleira de mussarela com um espaço vazio e uma lista de conferência com um item em dúvida" width="725" height="900" loading="lazy">
+      <figcaption><div class="slot__head"><span class="slot__n">02</span><h3 class="slot__title">Furo de estoque</h3></div><div class="slot__foot"><p>A mussarela entrou, mas a contagem não fecha.</p><a href="#diagnostico" class="slot__link">Ver na minha<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div></figcaption></figure>
+    <figure class="slot"><img src="assets/galeria/mao-pesada.jpg" alt="Mão colocando queijo demais numa pizza em cima da balança, que passa do ponto certo" width="725" height="900" loading="lazy">
+      <figcaption><div class="slot__head"><span class="slot__n">03</span><h3 class="slot__title">Mão pesada</h3></div><div class="slot__foot"><p>220&nbsp;g de queijo onde a ficha pede 180&nbsp;g.</p><a href="#diagnostico" class="slot__link">Ver na minha<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div></figcaption></figure>
+    <figure class="slot"><img src="assets/galeria/meio-a-meio.jpg" alt="Pizza meio a meio, uma metade com cobertura cara e outra só de queijo, com etiqueta de preço pendendo para a mais barata" width="725" height="900" loading="lazy">
+      <figcaption><div class="slot__head"><span class="slot__n">04</span><h3 class="slot__title">Meio a meio</h3></div><div class="slot__foot"><p>Duas metades caras cobradas pelo preço da mais barata.</p><a href="#diagnostico" class="slot__link">Ver na minha<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div></figcaption></figure>
+    <figure class="slot"><img src="assets/galeria/lucro.jpg" alt="Dona de pizzaria olhando um gráfico em queda ao lado de um cofrinho rachado perdendo moedas" width="725" height="900" loading="lazy">
+      <figcaption><div class="slot__head"><span class="slot__n">05</span><h3 class="slot__title">Lucro que não veio</h3></div><div class="slot__foot"><p>Nada disso aparece como perda. Aparece no fim do mês.</p><a href="#diagnostico" class="slot__link">Ver na minha<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div></figcaption></figure>
+  </div>
+  <div class="carrossel__ctrl wrap">
+    <div class="carrossel__dots" role="tablist" aria-label="Escolher card"></div>
+    <div class="carrossel__btns">
+      <button type="button" class="carrossel__btn" data-dir="-1" aria-label="Card anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <button type="button" class="carrossel__btn" data-dir="1" aria-label="Próximo card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Como funciona -->
+<section class="sec como" id="como-funciona">
+  <div class="como__bg"><img src="assets/bg-como.jpg" alt="" width="1917" height="1571" loading="lazy"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">A resposta já está nas suas vendas. <span class="accent">A gente só faz a conta.</span></h2>
+      <p class="lead">O sistema compara o que as vendas dizem que saiu com <b class="hl">o que realmente saiu do estoque.</b></p>
+    </div>
+    <div class="como__grid">
+      <div class="feed">
+<article class="note"><div class="note__top"><h3 class="note__title">Suas vendas</h3><span class="note__time">agora</span></div><p><b>Ontem</b> saíram 128 pizzas no salão e delivery</p></article>
+<article class="note"><div class="note__top"><h3 class="note__title">Ficha técnica</h3><span class="note__time">2 min</span></div><p><b>Margherita</b> 180&nbsp;g de mussarela por unidade</p></article>
+<article class="note"><div class="note__top"><h3 class="note__title">PDV integrado</h3><span class="note__time">5 min</span></div><p><b>Conexão</b> com as vendas chegando sozinhas, sem planilha</p></article>
+<article class="note"><div class="note__top"><h3 class="note__title">Estoque</h3><span class="note__time">11 min</span></div><p><b>Contagem</b> de segunda-feira registrada</p></article>
+<article class="note"><div class="note__top"><h3 class="note__title">Fornecedores</h3><span class="note__time">19 min</span></div><p><b>Mussarela</b> atualizada para R$&nbsp;32,00/kg</p></article>
+      </div>
+      <div class="orbit-cell">
+        <div class="orbit" aria-hidden="true">
+          <span class="orbit__glow"></span>
+<span class="orbit__ring" style="left:-5.9px;top:-5.9px;width:598.9px;height:598.9px"></span>
+<span class="orbit__ring" style="left:46.7px;top:46.7px;width:493.7px;height:493.7px"></span>
+<span class="orbit__ring" style="left:105.3px;top:105.3px;width:376.3px;height:376.3px"></span>
+          <img class="orbit__box" src="assets/caixa-chef.png" alt="" width="223" height="217">
+          <div class="orbit__chips">
+<span class="chip chip--faded" style="left:588.6px;top:250.5px">NF</span>
+<span class="chip chip--faded" style="left:546.0px;top:450.8px">KG</span>
+<span class="chip chip--faded" style="left:384.7px;top:576.9px">R$</span>
+<span class="chip chip--brand" style="left:180.0px;top:569.7px">PDV</span>
+<span class="chip chip--faded" style="left:27.8px;top:432.7px">QJ</span>
+<span class="chip chip--faded" style="left:-0.7px;top:229.9px">CAL</span>
+<span class="chip chip--faded" style="left:107.8px;top:56.2px">MOL</span>
+<span class="chip chip--faded" style="left:302.6px;top:-7.0px">FAR</span>
+<span class="chip chip--faded" style="left:492.5px;top:69.7px">UN</span>
+<span class="chip chip--brand" style="left:520.7px;top:384.5px">Vendas</span>
+<span class="chip" style="left:362.6px;top:528.4px">Ficha</span>
+<span class="chip" style="left:151.1px;top:494.4px">Custo</span>
+<span class="chip chip--brand" style="left:46.1px;top:308.1px">CMV</span>
+<span class="chip" style="left:126.2px;top:109.8px">Estoque</span>
+<span class="chip" style="left:331.2px;top:48.7px">Perda</span>
+<span class="chip" style="left:507.0px;top:171.1px">Meta</span>
+<span class="chip" style="left:402.6px;top:444.1px">kg</span>
+<span class="chip chip--brand" style="left:181.8px;top:444.1px">R$</span>
+<span class="chip" style="left:113.5px;top:234.1px">g</span>
+<span class="chip" style="left:292.2px;top:104.3px">%</span>
+<span class="chip" style="left:470.8px;top:234.1px">un</span>
+          </div>
+        </div>
+      </div>
+      <div class="feed">
+<article class="note"><div class="note__top"><h3 class="note__title">Consumo teórico</h3><span class="note__time">agora</span></div><p><b>Calculado:</b> 22,4&nbsp;kg de mussarela deveriam ter saído</p></article>
+<article class="note"><div class="note__top"><h3 class="note__title">Estoque real</h3><span class="note__time">1 min</span></div><p><b>Contado:</b> 30&nbsp;kg na câmara hoje de manhã</p></article>
+<article class="note"><div class="note__top"><h3 class="note__title">Diferença</h3><span class="note__time">4 min</span></div><p><b>Achamos</b> 12&nbsp;kg que não passaram por venda</p></article>
+<article class="note"><div class="note__top"><h3 class="note__title">CMV do mês</h3><span class="note__time">9 min</span></div><p><b>Fechou em</b> 38,4%, cinco pontos acima do ideal</p></article>
+<article class="note"><div class="note__top"><h3 class="note__title">Vazamento</h3><span class="note__time">15 min</span></div><p><b>Isso vale</b> R$&nbsp;5.000 por mês na sua operação</p></article>
+      </div>
+    </div>
+    <p class="h5 como__foot">A diferença entre os dois é o seu dinheiro. Agora visível, todo dia.</p>
+  </div>
+</section>
+
+<!-- 5. Simples de começar -->
+</div>
+
+<div class="sobrepoe"><!-- "O que muda" fica presa enquanto "Simples de começar" passa por cima -->
+<!-- 4b. Ganhos: o que muda no negócio do lead -->
+<section class="sec ganhos" id="ganhos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">O que muda na sua pizzaria <span class="accent">já no primeiro mês.</span></h2>
+      <p class="lead">Não é mais um relatório para ler. É saber, todo dia, <b class="hl">onde está o seu dinheiro e o que fazer com ele.</b></p>
+    </div>
+    <div class="ganhos__grid">
+      <article class="card ganho"><span class="ganho__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><h3 class="h5">Margem de volta</h3><p>Ache os pontos de CMV que escapam e transforme em lucro. Em quem fatura R$&nbsp;100 mil, são até R$&nbsp;5.000 por mês.</p></article>
+      <article class="card ganho"><span class="ganho__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></span><h3 class="h5">Compra na medida</h3><p>Saiba quanto tem de cada insumo e quanto vai precisar. Menos compra de emergência, menos produto vencendo.</p></article>
+      <article class="card ganho"><span class="ganho__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12 12 20l-8-8V4h8l8 8Z"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></span><h3 class="h5">Preço que fecha a conta</h3><p>Veja o custo real de cada pizza, inclusive do meio a meio, e ajuste o cardápio onde a margem some.</p></article>
+      <article class="card ganho"><span class="ganho__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 11l2 2 4-4"/></svg></span><h3 class="h5">Equipe no padrão</h3><p>Compare a ficha técnica com o consumo real e ache a mão pesada antes que ela vire hábito.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec simples">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">Simples de começar.<br><span class="accent">Difícil de largar</span> depois.</h2>
+    </div>
+    <div class="passos">
+      <article class="card card--big">
+        <div class="card__media"><img src="assets/card-assistencia.jpg" alt="Equipe da AbasteceAê montando produtos, ingredientes, fichas técnicas, fornecedores e custos" width="584" height="381" loading="lazy"></div>
+        <div class="card__body">
+          <h3 class="h4">A gente monta com você</h3>
+          <p class="lead">Na implantação assistida, nossa equipe cadastra junto seus produtos, ingredientes, fichas técnicas, fornecedores e custos. <b class="hl">Ninguém fica sozinho numa tela.</b></p>
+        </div>
+      </article>
+      <div class="passos__col">
+        <article class="card card--sm">
+          <div class="card__media"><img class="crop-vendas" src="assets/card-vendas.jpg" alt="Vendas realizadas virando consumo teórico de cada ingrediente" width="445" height="168" loading="lazy"></div>
+          <div class="card__body">
+            <h3 class="h4">A gente puxa suas vendas</h3>
+            <p class="body">O sistema lê suas vendas e transforma em consumo teórico sozinho. Nenhuma planilha no meio.</p>
+            <ul class="checklist">
+              <li><span class="dot"></span>Importando vendas de ontem<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></li>
+              <li><span class="dot"></span>Aplicando fichas técnicas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></li>
+              <li><span class="dot"></span>Calculando consumo teórico<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></li>
+            </ul>
+          </div>
+        </article>
+        <article class="card card--sm">
+          <div class="card__media"><img src="assets/card-buraco.png" alt="Painel com CMV de hoje, meta e diferença em reais" width="445" height="168" loading="lazy"></div>
+          <div class="card__body">
+            <h3 class="h4">Você vê o buraco</h3>
+            <p class="body">Todo dia: o CMV real, onde está escapando e quanto isso vale em reais. A decisão fica óbvia.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="whats" id="whatsapp">
+      <div class="conta__bg" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="whats__text">
+        <h3 class="h3">Pergunte para o seu estoque.<br><span class="accent">Ele responde.</span></h3>
+        <p class="lead">Texto ou áudio, na mesma tela onde você já resolve o resto do dia. <b class="hl">Sem abrir sistema, sem relatório, sem esperar.</b></p>
+        <p class="small">A tecnologia por trás é complicada. O que chega para você é a resposta certa, na hora certa.</p>
+        <a href="#diagnostico" class="btn btn--primary">Quero meu diagnóstico gratuito<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="chat" role="img" aria-label="Conversa de exemplo com a AbasteceAê no WhatsApp, num iPhone">
+        <div class="chat__screen">
+          <div class="chat__statusbar" aria-hidden="true"><span>9:41</span><span class="chat__island"></span><span class="chat__icons"><i></i><i></i><i></i></span></div>
+          <div class="chat__head"><svg class="chat__back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span class="chat__avatar"><img src="assets/logo-marca.png" alt=""></span><div><p class="chat__name">AbasteceAê</p><p class="chat__status">online</p></div></div>
+          <div class="chat__body">
+          <p class="msg msg--me">Quanto tenho de mussarela?<span class="msg__t">21:14<svg class="msg__ok" viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2M7 10l1 0 7-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></p>
+          <p class="msg msg--bot"><b>12,4&nbsp;kg</b> em estoque agora. Dá para mais ou menos <b>78 pizzas</b> no seu mix atual.<span class="msg__t">21:14</span></p>
+          <p class="msg msg--me">Quanto consumi de calabresa ontem?<span class="msg__t">21:15<svg class="msg__ok" viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2M7 10l1 0 7-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></p>
+          <p class="msg msg--bot">Ontem saíram <b>6,8&nbsp;kg</b>. Pelas vendas, deveriam ter saído <b>6,0&nbsp;kg</b>.<br><span class="alerta">Sobrou 13% de consumo sem venda.</span><span class="msg__t">21:15</span></p>
+        </div>
+          <div class="chat__input"><span class="chat__field">Mensagem</span><span class="chat__send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 14-7-5 15-3-6-6-2Z"/></svg></span></div>
+          <span class="chat__home" aria-hidden="true"></span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- 6. Diagnóstico -->
+<section class="sec diag" id="diagnostico">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">Antes de assinar nada, <span class="accent">descubra quanto está perdendo.</span></h2>
+      <p class="lead">Você passa alguns números da operação: faturamento médio, pizzas vendidas, principais insumos e custos, estoque atual. <b class="hl">A gente devolve:</b></p>
+    </div>
+    <div class="diag__grid">
+      <ul class="entrega">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><path d="m8.5 12.2 2.4 2.4 4.6-5"/></svg><h3 class="h5">Qual deveria ser o seu CMV</h3><p class="body">calculado com as suas fichas e as suas vendas</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><path d="m8.5 12.2 2.4 2.4 4.6-5"/></svg><h3 class="h5">Onde ele provavelmente está hoje</h3><p class="body">o retrato da sua operação, sem achismo</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><path d="m8.5 12.2 2.4 2.4 4.6-5"/></svg><h3 class="h5">Quanto isso vale em reais por mês</h3><p class="body">o número que transforma planilha em decisão</p></li>
+      </ul>
+      <aside class="oferta">
+        <span class="chip">Grátis · sem cartão</span>
+        <h3 class="h3">Diagnóstico de <span class="accent">CMV</span></h3>
+        <p class="body">Se estiver tudo redondo, ótimo: você dorme tranquilo. Se tiver vazamento, você vai querer resolver hoje.</p>
+        <a href="#diagnostico" class="btn btn--primary">Quero meu diagnóstico gratuito<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <ul>
+          <li><span class="dot"></span>Resposta em até 24&nbsp;h</li>
+          <li><span class="dot"></span>Sem instalação</li>
+          <li><span class="dot"></span>Sem compromisso</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 7. A conta -->
+<section class="sec conta">
+  <div class="conta__bg" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <span class="chip">A conta que ninguém tinha feito</span>
+    <h2 class="h2 conta__titulo">Quanto custam 5 pontos de CMV <span>na vida real?</span></h2>
+    <p class="lead">Exemplo de uma pizzaria que fatura <b class="hl">R$&nbsp;100 mil por mês</b>:</p>
+    <ul class="conta__stats conta__eq">
+      <li><span>Faturamento</span><b class="num">R$&nbsp;100 mil</b><small>por mês</small></li>
+      <li class="conta__op" aria-hidden="true">×</li>
+      <li><span>CMV acima do ideal</span><b class="num">5&nbsp;pts</b><small>ex.: 33% virou 38%</small></li>
+      <li class="conta__op" aria-hidden="true">=</li>
+      <li class="conta__total"><span>Saindo do seu bolso</span><b class="num">R$&nbsp;5.000</b><small>todo mês</small></li>
+    </ul>
+    <p class="conta__ano">Em 12 meses, isso vira</p>
+    <p class="conta__valor num">R$&nbsp;60.000</p>
+    <p class="conta__por">Dinheiro que já era seu, parado no estoque. O diagnóstico gratuito mostra <b>quanto disso acontece na sua pizzaria</b>.</p>
+  </div>
+</section>
+
+<!-- 8. Sobre, segmentos e teste -->
+<section class="sec sobre">
+  <div class="wrap sobre__grid">
+    <div class="sobre__text">
+      <h2 class="h2">A gente nasceu para parar o dinheiro que <span class="accent nb">some da cozinha.</span></h2>
+      <p class="lead">Dono de restaurante é especialista em fazer comida boa e atender bem. Não em cruzar venda com estoque numa planilha às 23h. <b class="hl">Esse trabalho a gente assume.</b></p>
+      <p class="lead">Somos especializados em operação que gira muito insumo: pizzaria, hamburgueria, açaí, sushi e delivery de alto volume. <b class="hl">É onde o desperdício se esconde melhor.</b></p>
+    </div>
+    <figure class="sobre__foto"><img src="assets/sobre-time.jpg" alt="Dono de pizzaria tranquilo segurando uma pizza enquanto uma especialista da AbasteceAê cruza vendas e estoque num painel, cercados de ícones de pizza, hambúrguer, açaí, sushi e delivery" width="886" height="1100" loading="lazy"></figure>
+  </div>
+  <div class="segs" aria-label="Segmentos atendidos">
+    <span>Pizzarias</span><span>Hamburguerias</span><span>Açaí</span><span>Sushi</span><span>Delivery de alto volume</span><span>Pizzarias</span><span>Hamburguerias</span><span>Açaí</span><span>Sushi</span><span>Delivery de alto volume</span>
+  </div>
+  <div class="wrap teste" id="teste">
+    <div class="teste__text">
+      <h2 class="h2">14 dias de teste.<br><span class="accent">E a gente configura <span class="nb">com você.</span></span></h2>
+      <p class="lead">Você usa o <b class="hl">sistema completo por 14 dias.</b> Nesse período, nossa equipe cadastra com você produtos, fichas técnicas, fornecedores, custos e a integração com as vendas.</p>
+      <blockquote class="lead">Quando o teste acaba, você não tem um sistema para configurar. Você tem a sua operação rodando dentro dele.</blockquote>
+      <a href="#diagnostico" class="btn btn--secondary">Começar meu teste de 14 dias<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <ol class="timeline">
+      <li><b>Dia 1</b><span>Cadastro de produtos e ingredientes</span></li>
+      <li><b>Dia 3</b><span>Fichas técnicas montadas com você</span></li>
+      <li><b>Dia 7</b><span>Fornecedores e custos no lugar</span></li>
+      <li><b>Dia 10</b><span>Vendas integradas, consumo teórico rodando</span></li>
+      <li><b>Dia 14</b><span>Sua operação já dentro do sistema</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 9. Indicação -->
+<section class="sec indica">
+  <div class="indica__bg"><img src="assets/bg-etereo.jpg" alt="" width="2752" height="1536" loading="lazy"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">Conhece outro dono que <span class="accent">vive reclamando de estoque?</span></h2>
+      <p class="lead">Restaurante conversa com restaurante. <b class="hl">A gente recompensa isso.</b></p>
+    </div>
+    <div class="indica__cards">
+      <article class="premio"><span class="premio__n">1</span><p class="body">Indique um restaurante que feche com a gente</p><p class="h3">1 mês grátis</p></article>
+      <article class="premio premio--destaque"><span class="premio__n">3</span><p class="body">Indique três que fechem com a gente</p><p class="h3">3 meses grátis</p></article>
+    </div>
+    <div class="indica__cta"><a href="#" class="btn btn--secondary">Quero indicar e ganhar meses grátis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<!-- 10. FAQ -->
+<section class="sec" id="duvidas">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h2">Ainda em <span class="accent">dúvida?</span></h2></div>
+    <div class="faq">
+      <details open><summary class="h5">Preciso ter ficha técnica pronta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="body">Não. A gente monta junto na implantação.</p></details>
+      <details><summary class="h5">Serve só para pizzaria?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="body">O foco é pizzaria, mas funciona em hamburgueria, açaí, sushi, delivery de alto volume e restaurante de pequeno e médio porte. Qualquer operação que gire muito insumo.</p></details>
+      <details><summary class="h5">É difícil de usar no dia a dia?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="body">As respostas chegam no WhatsApp. Se você usa WhatsApp, você usa a AbasteceAê.</p></details>
+      <details><summary class="h5">E se eu não tiver perda nenhuma?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="body">Melhor ainda: o diagnóstico te dá essa certeza. Mas, na prática, quase toda operação tem vazamento que não aparece no caixa.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11. CTA final -->
+<section class="sec final conta">
+  <div class="conta__bg" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <span class="chip">Último passo</span>
+    <h2 class="h2 conta__titulo">Você não precisa trocar de sistema hoje.<br><span>Precisa saber quanto está perdendo.</span></h2>
+    <p class="lead">Comece pelo diagnóstico gratuito. Sem compromisso, sem instalação. <b class="hl">Só os seus números dizendo a verdade.</b></p>
+    <div class="final__btns">
+      <a href="#diagnostico" class="btn btn--primary">Quero meu diagnóstico gratuito<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#" class="btn btn--secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5 4.9 16A8.5 8.5 0 1 1 8 19.2Z"/><path d="M9 9.5c.3 2.1 2.4 4.3 4.6 4.8l1.2-1.2 1.7.8-.4 1.6c-3.4.4-7.3-3.3-7.2-6.9l1.5-.6.9 1.6Z"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a href="#topo" class="logo" aria-label="AbasteceAê, voltar ao topo"><img src="assets/logo-marca.png" alt="" width="40" height="39"><span>Abastece<b>Aê</b></span></a>
+    <p class="small">© 2026 AbasteceAê</p>
+  </div>
+</footer>
+
+<script>
+  // Menu do celular
+  const burger = document.querySelector('.burger');
+  burger.addEventListener('click', () => { const o = document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? 'Fechar menu' : 'Abrir menu'); });
+  document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => { document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', 'false'); }));
+  // CTA do header só aparece depois que o CTA do hero sai da tela (TXT-08)
+  // Altura dos cards de números define quanto eles sobem sobre o hero
+  const statsEl = document.querySelector('.stats');
+  // metade da primeira linha de cards (no celular são 2 linhas)
+  const setHalf = () => document.documentElement.style.setProperty('--stats-half', statsEl.firstElementChild.offsetHeight / 2 + 'px');
+  new ResizeObserver(setHalf).observe(statsEl); setHalf();
+  new IntersectionObserver(([e]) => document.body.classList.toggle('past-hero', !e.isIntersecting && e.boundingClientRect.top < 0)).observe(document.getElementById('hero-cta'));
+
+  // Seções presas: se forem mais altas que a tela, prendem pelo pé para aparecer inteiras antes de serem cobertas
+  const pinTops = () => document.querySelectorAll('.sobrepoe > section:first-of-type').forEach(el => {
+    const h = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 72;
+    el.style.top = Math.min(h, innerHeight - el.offsetHeight) + 'px';
+  });
+  addEventListener('resize', pinTops); addEventListener('load', pinTops); pinTops();
+
+  // Menu vira vidro azul assim que a página rola
+  const header = document.querySelector('.header');
+  const onScrollHeader = () => header.classList.toggle('is-scrolled', scrollY > 24);
+  addEventListener('scroll', onScrollHeader, { passive: true }); onScrollHeader();
+
+  // ---------- Carrossel da galeria: setas, bolinhas e troca sozinha a cada 4 s (para no hover, no toque e com "menos movimento")
+  (() => {
+    const row = document.querySelector('.galeria__row'), cards = [...row.children];
+    const dotsEl = document.querySelector('.carrossel__dots');
+    const dots = cards.map((c, i) => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'carrossel__dot'; b.setAttribute('role', 'tab');
+      b.setAttribute('aria-label', 'Card ' + (i + 1) + ': ' + c.querySelector('.slot__title').textContent);
+      b.addEventListener('click', () => { go(i); restart(); }); dotsEl.append(b); return b;
+    });
+    const step = () => cards[1].offsetLeft - cards[0].offsetLeft;
+    const maxIdx = () => { const last = Math.ceil((row.scrollWidth - row.clientWidth) / step() - 0.05); return Math.min(cards.length - 1, Math.max(0, last)); };
+    const current = () => Math.round(row.scrollLeft / step());
+    const go = i => { const m = maxIdx(); i = i > m ? 0 : i < 0 ? m : i; row.scrollTo({ left: i * step(), behavior: 'smooth' }); };
+    const paint = () => { const m = maxIdx(), c = Math.min(current(), m);
+      dots.forEach((d, i) => { d.hidden = i > m; d.setAttribute('aria-selected', i === c); }); };
+    row.addEventListener('scroll', () => requestAnimationFrame(paint), { passive: true });
+    // Rolagem vertical (roda do mouse / trackpad) em cima do carrossel vai para a página, sem travar
+    row.addEventListener('wheel', e => {
+      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) { paused = true; clearTimeout(row._t); row._t = setTimeout(() => { paused = false; restart(); }, 3000); return; }
+      e.preventDefault();
+      const k = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1;
+      window.scrollBy({ top: e.deltaY * k, behavior: 'instant' });
+    }, { passive: false });
+    addEventListener('resize', paint); paint();
+    document.querySelectorAll('.carrossel__btn').forEach(b => b.addEventListener('click', () => { go(current() + +b.dataset.dir); restart(); }));
+
+    let timer = null, paused = false, visible = false;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const tick = () => { if (!paused && visible && !document.hidden) go(current() + 1); };
+    const restart = () => { clearInterval(timer); if (!reduce) timer = setInterval(tick, 4000); };
+    const sec = row.closest('.galeria');
+    ['pointerenter', 'focusin', 'touchstart'].forEach(ev => sec.addEventListener(ev, () => { paused = true; }, { passive: true }));
+    ['pointerleave', 'focusout'].forEach(ev => sec.addEventListener(ev, () => { paused = false; restart(); }));
+    sec.addEventListener('touchend', () => { setTimeout(() => { paused = false; restart(); }, 3000); }, { passive: true });
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(row);
+    restart();
+  })();
+
+  // ---------- Movimento (MOT-01). Com "menos movimento" nada disso roda e a página fica parada (MOT-17).
+  (() => {
+    // A faixa de segmentos ganha um trilho para correr em loop
+    const segs = document.querySelector('.segs');
+    const track = document.createElement('div'); track.className = 'segs__track';
+    track.append(...segs.children); segs.append(track);
+    [...track.children].slice(5).forEach(s => s.setAttribute('aria-hidden', 'true'));
+
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('motion');
+
+    // 1. Entrada única: subir e aparecer, em cascata entre irmãos
+    const groups = [
+      '.hero__text > *', '.hero__media', '.stat', '.sec-head > *', '.prejuizo__text > *', '.prejuizo__media',
+      '.slot', '.feed .note', '.orbit-cell', '.card', '.whats__text > *', '.chat', '.entrega li', '.oferta',
+      '.conta .wrap > :not(.conta__stats)', '.conta__stats li', '.sobre__text > *', '.sobre__foto', '.segs',
+      '.teste__text > *', '.timeline li', '.premio', '.indica__cta', '.faq details', '.final .wrap > *', '.checklist li'
+    ];
+    const items = [];
+    groups.forEach(sel => {
+      const byParent = new Map();
+      document.querySelectorAll(sel).forEach(el => {
+        if (el.hasAttribute('data-reveal')) return;
+        const n = byParent.get(el.parentElement) || 0; byParent.set(el.parentElement, n + 1);
+        el.setAttribute('data-reveal', ''); el.style.setProperty('--d', Math.min(n * 90, 540) + 'ms');
+        items.push(el);
+      });
+    });
+    // Bentos entram dos lados para o centro, alternando esquerda e direita
+    document.querySelectorAll('.ganho, .passos .card').forEach((el, i) => el.setAttribute('data-reveal', i % 2 ? 'right' : 'left'));
+
+    // 2. Título do hero palavra por palavra
+    const h1 = document.querySelector('.hero .h1'); let wi = 0;
+    const split = node => [...node.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(p => {
+          if (!p) return;
+          if (/^\s+$/.test(p)) { frag.append(p); return; }
+          const s = document.createElement('span'); s.className = 'w'; s.style.setProperty('--wi', wi++); s.textContent = p; frag.append(s);
+        });
+        c.replaceWith(frag);
+      } else split(c);
+    });
+    h1.setAttribute('aria-label', h1.textContent.trim()); split(h1);
+    h1.querySelectorAll('.w').forEach(w => w.setAttribute('aria-hidden', 'true'));
+    h1.removeAttribute('data-reveal'); items.splice(items.indexOf(h1), 1);
+    setTimeout(() => h1.classList.add('is-in'), 60);
+
+    // chips da órbita flutuam fora de fase
+    document.querySelectorAll('.orbit .chip').forEach((c, i) => c.style.setProperty('--ci', i));
+
+    // 3. Contadores
+    const fmt = (v, dec) => v.toLocaleString('pt-BR', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    const counters = [...document.querySelectorAll('.stat__value, .conta__valor, .conta__stats b')];
+    counters.forEach(el => {
+      const m = el.textContent.match(/[\d.,]+/); if (!m) return;
+      const raw = m[0]; const dec = (raw.split(',')[1] || '').length;
+      el.dataset.count = raw.replace(/\./g, '').replace(',', '.');
+      el.dataset.dec = dec; el.dataset.pre = el.textContent.slice(0, m.index); el.dataset.suf = el.textContent.slice(m.index + raw.length);
+      el.style.minWidth = el.getBoundingClientRect().width + 'px';   // sem pulo de layout
+      el.textContent = el.dataset.pre + fmt(0, dec) + el.dataset.suf;
+    });
+    const runCount = el => {
+      const to = +el.dataset.count, dec = +el.dataset.dec, t0 = performance.now(), dur = 1400, run = el._run = (el._run || 0) + 1;
+      const tick = t => { if (run !== el._run) return; const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 4);
+        el.textContent = el.dataset.pre + fmt(to * e, dec) + el.dataset.suf; if (p < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    };
+    const resetCount = el => { el._run = (el._run || 0) + 1; el.textContent = el.dataset.pre + fmt(0, +el.dataset.dec) + el.dataset.suf; };
+
+    // 4. Chat: pergunta, "digitando…", resposta
+    const chat = document.querySelector('.chat'); const status = chat.querySelector('.chat__status');
+    const msgs = [...chat.querySelectorAll('.msg')];
+    const wait = ms => new Promise(r => setTimeout(r, ms));
+    let chatRun = 0;
+    const runChat = async () => {
+      const run = ++chatRun;
+      for (const m of msgs) {
+        if (m.classList.contains('msg--bot')) { chat.classList.add('is-typing'); status.textContent = 'digitando…'; await wait(1100); if (run !== chatRun) return; chat.classList.remove('is-typing'); status.textContent = 'online'; }
+        m.classList.add('is-in'); await wait(m.classList.contains('msg--me') ? 500 : 900); if (run !== chatRun) return;
+      }
+    };
+    const resetChat = () => { chatRun++; msgs.forEach(m => m.classList.remove('is-in')); chat.classList.remove('is-typing'); status.textContent = 'online'; };
+
+    // Observa tudo. Os efeitos tocam de novo sempre que o bloco volta à tela, subindo ou descendo.
+    const timers = new WeakMap();
+    const enter = el => {
+      if (el.classList.contains('is-in')) return;
+      el.classList.add('is-in');
+      const t = [];
+      if (el.dataset.count) t.push(setTimeout(() => runCount(el), 200));
+      if (el === chat) t.push(setTimeout(runChat, 400));
+      timers.set(el, t);
+    };
+    const leave = el => {
+      if (!el.classList.contains('is-in')) return;
+      (timers.get(el) || []).forEach(clearTimeout);
+      el.classList.remove('is-in');
+      if (el.dataset.count) resetCount(el);
+      if (el === chat) resetChat();
+    };
+    // entra quando está bem visível; só "sai" quando some por completo, para não piscar na borda
+    const ioIn = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) enter(e.target); }),
+      { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+    const ioOut = new IntersectionObserver(entries => entries.forEach(e => { if (!e.isIntersecting) leave(e.target); }),
+      { threshold: 0 });
+    [...items, ...counters, h1].forEach(el => { ioIn.observe(el); ioOut.observe(el); });
+  })();
+</script>
+</body>
+</html>

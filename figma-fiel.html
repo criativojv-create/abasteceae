@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AbasteceAê — Diagnóstico gratuito de CMV</title>
+<meta name="description" content="A AbasteceAê cruza vendas e estoque para mostrar onde o consumo de ingredientes pode estar comendo seu lucro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Inter:wght@400;500;600;700&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+<style type="text/tailwindcss">
+  @theme {
+    --font-instrument: "Instrument Sans", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    --font-tight: "Inter", sans-serif; /* o Figma renderiza "Inter Tight" como Inter */
+    --font-sora: "Sora", sans-serif;
+  }
+</style>
+<link rel="stylesheet" href="figma-fiel.css">
+</head>
+<body>
+<div class="page">
+
+<!-- ============ 1. HERO (Figma y 0–1132) ============ -->
+<header class="sec sec-hero" style="--h:1132px" id="topo">
+  <div class="bg-img" style="left:calc(50% - 1041px);top:-31px;width:2082px;height:1163px">
+    <img src="assets/bg-etereo.jpg" alt="" class="absolute inset-0 size-full object-cover">
+  </div>
+  <div class="cv">
+    <!-- Menu -->
+    <nav class="nav a" style="--x:111px;--y:78.49px;--w:1698px">
+      <a href="#topo" class="nav-logo" aria-label="AbasteceAê">
+        <!-- Marca AbasteceAê (vetores do Figma, nó 11:327) -->
+<div class="logo-mark relative shrink-0 w-[47px] h-[56px]">
+  <div class="absolute left-[-48.67px] top-[-10.82px] w-[1698px] h-[77.51px] pointer-events-none">
+    <div class="absolute h-[23.532px] left-[76.24px] top-[42.33px] w-[20.848px]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="assets/logo/e1631.svg"></div>
+    <div class="absolute inset-[44.9%_93.93%_15.55%_2.87%]"><div class="absolute inset-[-2.07%_-1.17%]"><img alt="" class="block max-w-none size-full" src="assets/logo/32600.svg"></div></div>
+    <div class="absolute left-[63.17px] overflow-clip size-[24.822px] top-[10.82px]"><div class="absolute inset-[8.21%_3.59%_5.66%_2.79%]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="assets/logo/05c87.svg"></div></div>
+    <div class="absolute h-[23.567px] left-[54.59px] top-[41.77px] w-[21.196px]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="assets/logo/a793e.svg"></div>
+    <div class="absolute flex h-[4.149px] items-center justify-center left-[84.86px] top-[31.24px] w-[8.053px]"><div class="flex-none rotate-180"><div class="h-[4.149px] relative w-[8.053px]"><div class="absolute inset-[-12.7%_-7.36%_-14.29%_-3.37%]"><img alt="" class="block max-w-none size-full" src="assets/logo/2168d.svg"></div></div></div></div>
+    <div class="absolute flex h-[4.149px] items-center justify-center left-[58.15px] top-[31.45px] w-[8.053px]"><div class="-scale-y-100 flex-none"><div class="h-[4.149px] relative w-[8.053px]"><div class="absolute inset-[-12.7%_-7.36%_-14.29%_-3.37%]"><img alt="" class="block max-w-none size-full" src="assets/logo/6570b.svg"></div></div></div></div>
+    <div class="absolute h-[7.042px] left-[52.85px] top-[27.79px] w-[7.391px]"><div class="absolute inset-[-9%_-8.58%]"><img alt="" class="block max-w-none size-full" src="assets/logo/0aa3d.svg"></div></div>
+    <div class="absolute flex h-[7.042px] items-center justify-center left-[91.49px] top-[27.79px] w-[7.391px]"><div class="-scale-y-100 flex-none rotate-180"><div class="h-[7.042px] relative w-[7.391px]"><div class="absolute inset-[-9%_-8.58%]"><img alt="" class="block max-w-none size-full" src="assets/logo/96d14.svg"></div></div></div></div>
+    <div class="absolute flex h-[9.305px] items-center justify-center left-[52.85px] top-[21.27px] w-[9.497px]"><div class="-scale-y-100 flex-none rotate-[-157.9deg]"><div class="h-[7.042px] relative w-[7.391px]"><div class="absolute inset-[-9%_-8.58%]"><img alt="" class="block max-w-none size-full" src="assets/logo/15544.svg"></div></div></div></div>
+    <div class="absolute flex h-[9.305px] items-center justify-center left-[89.39px] top-[21.27px] w-[9.497px]"><div class="flex-none rotate-[-22.1deg]"><div class="h-[7.042px] relative w-[7.391px]"><div class="absolute inset-[-9%_-8.58%]"><img alt="" class="block max-w-none size-full" src="assets/logo/f1edc.svg"></div></div></div></div>
+    <div class="absolute inset-[65.68%_94.67%_24.17%_5.02%]"><div class="absolute inset-[-4.08%_-6.06%]"><img alt="" class="block max-w-none size-full" src="assets/logo/d59ea.svg"></div></div>
+  </div>
+</div>
+
+        <span class="font-sora text-[24.252px] text-[#9b9b9b] leading-[normal] whitespace-nowrap">Abastece<span class="font-semibold text-[#3d7bff]">Aê</span></span>
+      </a>
+      <button class="nav-burger" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></button>
+      <div class="nav-right">
+        <ul class="nav-links font-instrument text-[19.828px] text-black leading-[normal]">
+          <li><a href="#prejuizo">Prejuizo</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#whatsapp">No WhatsApp</a></li>
+          <li><a href="#teste">Teste</a></li>
+          <li><a href="#duvidas">Duvidas</a></li>
+        </ul>
+        <a href="#diagnostico" class="btn-pill btn-nav">
+          <span class="btn-pill__label font-instrument text-[16.224px]">DIAGNOSTICO GRATUITO</span>
+          <span class="btn-pill__arrow"><img src="assets/seta-nav.svg" alt="" class="-rotate-90 w-[16.858px] h-[16.623px]"></span>
+        </a>
+      </div>
+    </nav>
+
+    <h1 class="a hero-title font-instrument font-normal text-[81.11px] leading-[normal] text-black" style="--x:319px;--y:304px;--w:772px">
+      Sua Negocio vende bem. <span class="font-semibold text-[#3d7bff]">Então por que sobra tão pouco?</span>
+    </h1>
+    <p class="a hero-sub font-instrument text-[26.219px] leading-[normal] text-black" style="--x:319px;--y:630px;--w:752px">
+      A AbasteceAê cruza vendas e estoque para mostrar onde o consumo de ingredientes pode estar comendo seu lucro.
+    </p>
+    <a href="#diagnostico" class="a btn-pill btn-hero" style="--x:320px;--y:761px;--w:466px">
+      <span class="btn-pill__label font-instrument text-[23.692px]">DIAGNOSTICO GRATUITO</span>
+      <span class="btn-pill__arrow"><img src="assets/seta-hero.svg" alt="" class="-rotate-90 w-[24.617px] h-[24.274px]"></span>
+    </a>
+    <div class="a hero-laptop" style="--x:964px;--y:265px;--w:799px">
+      <div class="relative w-full h-[867px] overflow-hidden">
+        <img src="assets/hero-laptop.png" alt="Dashboard AbasteceAê aberto em um notebook" class="absolute h-[113.62%] left-0 max-w-none top-[-0.05%] w-full">
+      </div>
+    </div>
+
+    <!-- Números (Figma 11:371) -->
+    <div class="a numbers" style="--x:371.3px;--y:1070.01px;--w:1180.15px">
+      <article class="num-card">
+        <div aria-hidden="true" class="num-card__bg"></div>
+        <span class="tag" style="width:49.443px">CMV</span>
+        <p class="num-card__big" style="background-image:linear-gradient(101.99deg, rgb(74,134,255) 4.2556%, rgb(46,107,240) 42.681%, rgb(27,69,184) 95.744%)">5 pts</p>
+        <p class="num-card__txt">acima do ideal já bastam para virar prejuízo</p>
+      </article>
+      <article class="num-card">
+        <div aria-hidden="true" class="num-card__bg"></div>
+        <span class="tag" style="width:74.016px">Por mês</span>
+        <p class="num-card__big" style="background-image:linear-gradient(112.02deg, rgb(74,134,255) 4.2556%, rgb(46,107,240) 42.681%, rgb(27,69,184) 95.744%)">R$ 5.000</p>
+        <p class="num-card__txt">parados no estoque de quem fatura R$ 100 mil</p>
+      </article>
+      <article class="num-card">
+        <div aria-hidden="true" class="num-card__bg"></div>
+        <span class="tag" style="width:74.787px">Por ano</span>
+        <p class="num-card__big" style="background-image:linear-gradient(115.21deg, rgb(74,134,255) 4.2556%, rgb(46,107,240) 42.681%, rgb(27,69,184) 95.744%)">R$ 60.000</p>
+        <p class="num-card__txt whitespace-nowrap">que já eram seus. Só faltava enxergar</p>
+      </article>
+      <article class="num-card">
+        <div aria-hidden="true" class="num-card__bg"></div>
+        <span class="tag" style="width:103.344px">Diagnóstico</span>
+        <p class="num-card__big" style="background-image:linear-gradient(99.6deg, rgb(74,134,255) 4.2556%, rgb(46,107,240) 42.681%, rgb(27,69,184) 95.744%)">24h</p>
+        <p class="num-card__txt">é o prazo da sua análise gratuita de CMV</p>
+      </article>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 2. PREJUÍZO (Figma y 1132–2025, fundo #d9e8fb) ============ -->
+<section class="sec sec-prejuizo" style="--h:893px" id="prejuizo">
+  <div class="cv">
+    <div class="prej-text">
+      <h2 class="a font-instrument font-normal text-[53px] leading-[56.18px] tracking-[-2.226px] text-[#101b33]" style="--x:406px;--y:342px;--w:618px">
+        O dinheiro não some do caixa. <span class="font-bold text-[#2a63e6]">Some do estoque.</span>
+      </h2>
+      <p class="a font-instrument text-[22px] leading-[28.672px] tracking-[-0.0768px] text-[rgba(16,27,51,0.78)]" style="--x:408px;--y:487px;--w:618px">
+        Você sabe quanto faturou ontem. Sabe quantas pizzas saíram. Mas tem uma conta que quase nenhuma pizzaria fecha:
+      </p>
+      <p class="a font-instrument text-[22px] leading-[28.672px] tracking-[-0.0768px] text-[rgba(16,27,51,0.78)]" style="--x:408px;--y:577px;--w:618px">
+        Sem essa resposta, desperdício, furo de estoque, mão pesada e meio a meio mal cobrado viram prejuízo todo mês. E nunca aparece como perda. Aparece como lucro que não veio.
+      </p>
+    </div>
+    <div class="a prej-img" style="--x:980px;--y:100px;--w:602px">
+      <div class="relative overflow-clip rounded-[44.76px] w-full aspect-[602/748]">
+        <img src="assets/seta-prejuizo.png" alt="Seta para baixo com o alerta Prejuízo -R$ 5.000" class="absolute inset-0 max-w-none object-cover rounded-[44.76px] size-full">
+      </div>
+      <div class="prej-shadow">
+        <img src="assets/sombra-seta.svg" alt="" class="block max-w-none size-full">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. FAIXA DE IMAGENS (Figma y 1964–2428) ============ -->
+<section class="sec sec-fotos" aria-label="Galeria">
+  <div class="fotos-row">
+    <div class="foto"><div class="foto__top"><img src="assets/placeholder.png" alt=""></div></div>
+    <div class="foto"><div class="foto__top"><img src="assets/placeholder.png" alt=""></div></div>
+    <div class="foto"><div class="foto__top"><img src="assets/placeholder.png" alt=""></div></div>
+    <div class="foto"><div class="foto__top"><img src="assets/placeholder.png" alt=""></div></div>
+    <div class="foto"><div class="foto__top"><img src="assets/placeholder.png" alt=""></div></div>
+  </div>
+</section>
+
+<!-- ============ 4. COMO FUNCIONA (Figma y 2428–3999) ============ -->
+<section class="sec sec-como" style="--h:1571px" id="como-funciona">
+  <div class="bg-img como-bg">
+    <img src="assets/bg-como.jpg" alt="" class="absolute inset-0 size-full">
+  </div>
+  <div class="cv">
+    <h2 class="a font-instrument font-normal text-[70.854px] leading-[normal] text-black text-center" style="--x:428px;--y:130px;--w:1064px">
+      A resposta já está nas suas vendas. <span class="font-semibold text-[#3d7bff]">A gente só faz a conta.</span>
+    </h2>
+    <p class="a font-instrument text-[22px] leading-[28.672px] tracking-[-0.0768px] text-[rgba(16,27,51,0.78)] text-center" style="--x:459px;--y:335px;--w:1002px">
+      Sem essa resposta, desperdício, furo de estoque, mão pesada e meio a meio mal cobrado viram prejuízo todo mês. E nunca aparece como perda. Aparece como lucro que não veio.
+    </p>
+    <div class="a orbit-pos" style="--x:186.81px;--y:519.11px;--w:1517.19px">
+<div class="orbit-wrap relative" data-node-id="11:714">
+  <div class="orbit-grid relative gap-x-[27.62px] grid grid-cols-[437.49px_587px_437.49px] grid-rows-[587px] w-[1517.188px] mx-auto" data-node-id="11:715" data-name="Container">
+    <div class="col-1 content-stretch flex flex-col gap-[13.488px] items-start justify-self-stretch relative row-1 self-center shrink-0" data-node-id="11:716" data-name="Container" data-fit="437.49">
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:717" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:718" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[322.604px]" data-node-id="11:719" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:720" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:721">
+              Suas vendas
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[288.44px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:722">
+              agora
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[24.279px] items-start pt-[1.349px] relative shrink-0 w-[322.604px]" data-node-id="11:723" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] whitespace-nowrap" data-node-id="11:724">
+              <span class="leading-[21.716px] text-[15.512px]">Ontem</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> saíram 128 pizzas no salão e delivery</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:725" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:726" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[312.487px]" data-node-id="11:727" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:728" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:729">
+              Ficha técnica
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[279.97px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:730">
+              2 min
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[24.279px] items-start pt-[1.349px] relative shrink-0 w-[312.487px]" data-node-id="11:731" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] whitespace-nowrap" data-node-id="11:732">
+              <span class="leading-[21.716px] text-[15.512px]">Margherita</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> 180g de mussarela por unidade</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:733" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:734" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[339.021px]" data-node-id="11:735" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:736" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:737">
+              PDV integrado
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[306.46px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:738">
+              5 min
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col items-start pt-[1.349px] relative shrink-0 w-[339.021px]" data-node-id="11:739" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] w-[339.907px]" data-node-id="11:740">
+              <span class="leading-[21.716px] text-[15.512px]">Conexão</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> vendas chegando sozinhas, sem planilha</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:741" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:742" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[283.087px]" data-node-id="11:743" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:744" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:745">
+              Estoque
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[246.52px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:746">
+              11 min
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[24.279px] items-start pt-[1.349px] relative shrink-0 w-[283.087px]" data-node-id="11:747" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] whitespace-nowrap" data-node-id="11:748">
+              <span class="leading-[21.716px] text-[15.512px]">Contagem</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> de segunda-feira registrada</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:749" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:750" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[284.857px]" data-node-id="11:751" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:752" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:753">
+              Fornecedores
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[246.88px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:754">
+              19 min
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[24.279px] items-start pt-[1.349px] relative shrink-0 w-[284.857px]" data-node-id="11:755" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] whitespace-nowrap" data-node-id="11:756">
+              <span class="leading-[21.716px] text-[15.512px]">Mussarela</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> atualizada para R$ 32,00/kg</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+    </div>
+    <div class="orbit-center col-2 h-[586.997px] justify-self-stretch relative row-1 self-center shrink-0" data-node-id="11:757" data-name="Container" data-fit="587">
+<!-- Caixa com chapéu de chef (vetores do Figma, nó 11:898) — coordenadas originais do frame 1920×12064 -->
+<div class="orbit-box absolute left-[173.08px] top-[181.89px] w-[223.26px] h-[226.19px] pointer-events-none z-[2]">
+  <div class="absolute left-[-825px] top-[-3129px] w-[1920px] h-[12064px]">
+    <div class="absolute h-[96.693px] left-[calc(41.67%+138.31px)] top-[3258.5px] w-[85.663px]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="assets/box/3460b.svg"></div>
+    <div class="absolute inset-[26.75%_45.4%_72.2%_42.97%]"><div class="absolute inset-[-2.07%_-1.17%]"><img alt="" class="block max-w-none size-full" src="assets/box/bb6dd.svg"></div></div>
+    <div class="absolute left-[calc(41.67%+84.59px)] overflow-clip size-[101.994px] top-[3129px]"><div class="absolute inset-[8.21%_3.59%_5.66%_2.79%]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="assets/box/842ed.svg"></div></div>
+    <div class="absolute h-[96.837px] left-[calc(41.67%+49.35px)] top-[3256.2px] w-[87.096px]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="assets/box/00882.svg"></div>
+    <div class="absolute flex h-[17.047px] items-center justify-center left-[calc(50%+13.69px)] top-[3212.94px] w-[33.091px]"><div class="flex-none rotate-180"><div class="h-[17.047px] relative w-[33.091px]"><div class="absolute inset-[-12.7%_-7.36%_-14.29%_-3.37%]"><img alt="" class="block max-w-none size-full" src="assets/box/d254c.svg"></div></div></div></div>
+    <div class="absolute flex h-[17.047px] items-center justify-center left-[calc(41.67%+63.96px)] top-[3213.8px] w-[33.091px]"><div class="-scale-y-100 flex-none"><div class="h-[17.047px] relative w-[33.091px]"><div class="absolute inset-[-12.7%_-7.36%_-14.29%_-3.37%]"><img alt="" class="block max-w-none size-full" src="assets/box/c7c81.svg"></div></div></div></div>
+    <div class="absolute h-[28.936px] left-[calc(41.67%+42.19px)] top-[3198.76px] w-[30.369px]"><div class="absolute inset-[-9%_-8.58%]"><img alt="" class="block max-w-none size-full" src="assets/box/a02f7.svg"></div></div>
+    <div class="absolute flex h-[28.936px] items-center justify-center left-[calc(50%+40.97px)] top-[3198.76px] w-[30.369px]"><div class="-scale-y-100 flex-none rotate-180"><div class="h-[28.936px] relative w-[30.369px]"><div class="absolute inset-[-9%_-8.58%]"><img alt="" class="block max-w-none size-full" src="assets/box/42ed3.svg"></div></div></div></div>
+    <div class="absolute flex h-[38.235px] items-center justify-center left-[calc(41.67%+42.19px)] top-[3171.97px] w-[39.023px]"><div class="-scale-y-100 flex-none rotate-[-157.9deg]"><div class="h-[28.936px] relative w-[30.369px]"><div class="absolute inset-[-9%_-8.58%]"><img alt="" class="block max-w-none size-full" src="assets/box/475d6.svg"></div></div></div></div>
+    <div class="absolute flex h-[38.235px] items-center justify-center left-[calc(50%+32.31px)] top-[3171.97px] w-[39.023px]"><div class="flex-none rotate-[-22.1deg]"><div class="h-[28.936px] relative w-[30.369px]"><div class="absolute inset-[-9%_-8.58%]"><img alt="" class="block max-w-none size-full" src="assets/box/01d3e.svg"></div></div></div></div>
+    <div class="absolute inset-[27.3%_48.08%_72.43%_50.79%]"><div class="absolute inset-[-4.08%_-6.06%]"><img alt="" class="block max-w-none size-full" src="assets/box/9848e.svg"></div></div>
+  </div>
+</div>
+
+      <div class="absolute blur-[45.86px] left-[70.43px] rounded-[223.064px] size-[446.127px] top-[70.43px]" data-node-id="11:758" style="background-image: url(&quot;data:image/svg+xml;utf8,<svg viewBox='0 0 446.13 446.13' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(0 -22.306 -22.306 0 223.06 223.06)'><stop stop-color='rgba(61,123,255,0.34)' offset='0'/><stop stop-color='rgba(61,123,255,0)' offset='0.7'/></radialGradient></defs></svg>&quot;)" data-name="Container"></div>
+      <div class="absolute border-[1.349px] border-[rgba(126,176,238,0.22)] border-dashed left-[-5.93px] rounded-[299.442px] size-[598.883px] top-[-5.93px]" data-node-id="11:759" data-name="Container">
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[570.93px] size-[47.209px] top-[232.81px]" data-node-id="11:760" data-name="Text">
+          <div class="col-1 grid grid-cols-[_25.84px] grid-rows-[_46.96px] justify-self-center min-w-[46.959720611572266px] opacity-50 px-[10.566px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[47.209px]" data-node-id="11:761" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[17.535px]" data-node-id="11:762" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[rgba(16,27,51,0.46)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:763">
+                NF
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[528.36px] size-[47.209px] top-[433.12px]" data-node-id="11:764" data-name="Text">
+          <div class="col-1 grid grid-cols-[_25.84px] grid-rows-[_46.96px] justify-self-center min-w-[46.959720611572266px] opacity-50 px-[10.566px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[47.209px]" data-node-id="11:765" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[18.884px]" data-node-id="11:766" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[rgba(16,27,51,0.46)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:767">
+                KG
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[366.99px] size-[47.209px] top-[559.19px]" data-node-id="11:768" data-name="Text">
+          <div class="col-1 grid grid-cols-[_25.84px] grid-rows-[_46.96px] justify-self-center min-w-[46.959720611572266px] opacity-50 px-[10.566px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[47.209px]" data-node-id="11:769" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[17.535px]" data-node-id="11:770" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[rgba(16,27,51,0.46)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:771">
+                R$
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[162.33px] size-[47.209px] top-[552.05px]" data-node-id="11:772" data-name="Text">
+          <div class="col-1 drop-shadow-[0px_13.488px_22.93px_rgba(61,123,255,0.55)] grid grid-cols-[_28.47px] grid-rows-[_46.96px] h-[47.209px] justify-self-center min-w-[46.959720611572266px] px-[10.566px] relative rounded-[1347.487px] row-1 self-center shrink-0 w-[49.907px]" data-node-id="11:773" style="background-image: linear-gradient(151.35918752835997deg, rgb(126, 176, 238) 7.735%, rgb(135, 184, 242) 92.265%)" data-name="Italic Text">
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[28.326px]" data-node-id="11:774" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[color:var(--on-brand,white)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:775">
+                PDV
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[10.15px] size-[47.209px] top-[415.02px]" data-node-id="11:776" data-name="Text">
+          <div class="col-1 grid grid-cols-[_25.84px] grid-rows-[_46.96px] justify-self-center min-w-[46.959720611572266px] opacity-50 px-[10.566px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[47.209px]" data-node-id="11:777" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[18.884px]" data-node-id="11:778" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[rgba(16,27,51,0.46)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:779">
+                QJ
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[-18.35px] size-[47.209px] top-[212.24px]" data-node-id="11:780" data-name="Text">
+          <div class="col-1 grid grid-cols-[_28.07px] grid-rows-[_46.96px] h-[47.209px] justify-self-center min-w-[46.959720611572266px] opacity-50 px-[10.566px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 w-[48.558px]" data-node-id="11:781" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[28.326px]" data-node-id="11:782" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[rgba(16,27,51,0.46)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:783">
+                CAL
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[90.17px] size-[47.209px] top-[38.57px]" data-node-id="11:784" data-name="Text">
+          <div class="col-1 grid grid-cols-[_31.04px] grid-rows-[_46.96px] h-[47.209px] justify-self-center min-w-[46.959720611572266px] opacity-50 px-[10.566px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 w-[52.605px]" data-node-id="11:785" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[31.023px]" data-node-id="11:786" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[rgba(16,27,51,0.46)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:787">
+                MOL
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[284.93px] size-[47.209px] top-[-24.71px]" data-node-id="11:788" data-name="Text">
+          <div class="col-1 grid grid-cols-[_25.88px] grid-rows-[_46.96px] justify-self-center min-w-[46.959720611572266px] opacity-50 px-[10.566px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[47.209px]" data-node-id="11:789" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[25.628px]" data-node-id="11:790" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[rgba(16,27,51,0.46)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:791">
+                FAR
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_46.96px] grid-rows-[_46.96px] left-[474.79px] size-[47.209px] top-[52px]" data-node-id="11:792" data-name="Text">
+          <div class="col-1 grid grid-cols-[_25.84px] grid-rows-[_46.96px] justify-self-center min-w-[46.959720611572266px] opacity-50 px-[10.566px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[47.209px]" data-node-id="11:793" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[22.93px] items-start justify-self-center relative row-1 self-center shrink-0 w-[20.233px]" data-node-id="11:794" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[22.541px] not-italic relative shrink-0 text-[14.088px] text-[rgba(16,27,51,0.46)] tracking-[-0.2818px] whitespace-nowrap" data-node-id="11:795">
+                UN
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute border-[1.349px] border-[rgba(126,176,238,0.22)] border-dashed left-[46.67px] rounded-[246.837px] size-[493.674px] top-[46.67px]" data-node-id="11:796" data-name="Container">
+        <div class="absolute grid grid-cols-[_55.74px] grid-rows-[_55.74px] left-[446.42px] size-[55.302px] top-[310.19px]" data-node-id="11:797" data-name="Text">
+          <div class="col-1 drop-shadow-[0px_13.488px_22.93px_rgba(61,123,255,0.55)] grid grid-cols-[_67.65px] grid-rows-[_55.74px] h-[55.302px] justify-self-center min-w-[55.76465606689453px] px-[12.547px] relative rounded-[1347.487px] row-1 self-center shrink-0 w-[93.07px]" data-node-id="11:798" style="background-image: linear-gradient(161.0647921606455deg, rgb(126, 176, 238) 7.735%, rgb(135, 184, 242) 92.265%)" data-name="Italic Text">
+            <div class="col-1 content-stretch flex flex-col h-[26.977px] items-start justify-self-center relative row-1 self-center shrink-0 w-[67.442px]" data-node-id="11:799" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[26.767px] not-italic relative shrink-0 text-[16.729px] text-[color:var(--on-brand,white)] tracking-[-0.3346px] whitespace-nowrap" data-node-id="11:800">
+                VENDAS
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_55.74px] grid-rows-[_55.74px] left-[288.27px] size-[55.302px] top-[454.1px]" data-node-id="11:801" data-name="Text">
+          <div class="col-1 grid grid-cols-[_50.35px] grid-rows-[_55.74px] h-[55.302px] justify-self-center min-w-[55.76465606689453px] px-[12.547px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 w-[75.535px]" data-node-id="11:802" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[26.977px] items-start justify-self-center relative row-1 self-center shrink-0 w-[49.907px]" data-node-id="11:803" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[26.767px] not-italic relative shrink-0 text-[16.729px] text-[rgba(16,27,51,0.46)] tracking-[-0.3346px] whitespace-nowrap" data-node-id="11:804">
+                FICHA
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_55.74px] grid-rows-[_55.74px] left-[76.78px] size-[55.302px] top-[420.04px]" data-node-id="11:805" data-name="Text">
+          <div class="col-1 grid grid-cols-[_57.75px] grid-rows-[_55.74px] h-[55.302px] justify-self-center min-w-[55.76465606689453px] px-[12.547px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 w-[82.279px]" data-node-id="11:806" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[26.977px] items-start justify-self-center relative row-1 self-center shrink-0 w-[58px]" data-node-id="11:807" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[26.767px] not-italic relative shrink-0 text-[16.729px] text-[rgba(16,27,51,0.46)] tracking-[-0.3346px] whitespace-nowrap" data-node-id="11:808">
+                CUSTO
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_55.74px] grid-rows-[_55.74px] left-[-28.19px] size-[55.302px] top-[233.75px]" data-node-id="11:809" data-name="Text">
+          <div class="col-1 drop-shadow-[0px_13.488px_22.93px_rgba(61,123,255,0.55)] grid grid-cols-[_39.37px] grid-rows-[_55.74px] h-[55.302px] justify-self-center min-w-[55.76465606689453px] px-[12.547px] relative rounded-[1347.487px] row-1 self-center shrink-0 w-[64.744px]" data-node-id="11:810" style="background-image: linear-gradient(153.74963537681998deg, rgb(126, 176, 238) 7.735%, rgb(135, 184, 242) 92.265%)" data-name="Italic Text">
+            <div class="col-1 content-stretch flex flex-col h-[26.977px] items-start justify-self-center relative row-1 self-center shrink-0 w-[39.116px]" data-node-id="11:811" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[26.767px] not-italic relative shrink-0 text-[16.729px] text-[color:var(--on-brand,white)] tracking-[-0.3346px] whitespace-nowrap" data-node-id="11:812">
+                CMV
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_55.74px] grid-rows-[_55.74px] left-[51.91px] size-[55.302px] top-[35.49px]" data-node-id="11:813" data-name="Text">
+          <div class="col-1 grid grid-cols-[_78.06px] grid-rows-[_55.74px] h-[55.302px] justify-self-center min-w-[55.76465606689453px] px-[12.547px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 w-[102.512px]" data-node-id="11:814" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[26.977px] items-start justify-self-center relative row-1 self-center shrink-0 w-[78.232px]" data-node-id="11:815" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[26.767px] not-italic relative shrink-0 text-[16.729px] text-[rgba(16,27,51,0.46)] tracking-[-0.3346px] whitespace-nowrap" data-node-id="11:816">
+                ESTOQUE
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_55.74px] grid-rows-[_55.74px] left-[256.83px] size-[55.302px] top-[-25.6px]" data-node-id="11:817" data-name="Text">
+          <div class="col-1 grid grid-cols-[_54.33px] grid-rows-[_55.74px] h-[55.302px] justify-self-center min-w-[55.76465606689453px] px-[12.547px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 w-[79.581px]" data-node-id="11:818" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[26.977px] items-start justify-self-center relative row-1 self-center shrink-0 w-[53.953px]" data-node-id="11:819" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[26.767px] not-italic relative shrink-0 text-[16.729px] text-[rgba(16,27,51,0.46)] tracking-[-0.3346px] whitespace-nowrap" data-node-id="11:820">
+                PERDA
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_55.74px] grid-rows-[_55.74px] left-[432.63px] size-[55.302px] top-[96.81px]" data-node-id="11:821" data-name="Text">
+          <div class="col-1 grid grid-cols-[_46.37px] grid-rows-[_55.74px] h-[55.302px] justify-self-center min-w-[55.76465606689453px] px-[12.547px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 w-[71.488px]" data-node-id="11:822" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[26.977px] items-start justify-self-center relative row-1 self-center shrink-0 w-[45.86px]" data-node-id="11:823" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[26.767px] not-italic relative shrink-0 text-[16.729px] text-[rgba(16,27,51,0.46)] tracking-[-0.3346px] whitespace-nowrap" data-node-id="11:824">
+                META
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute border-[1.349px] border-[rgba(126,176,238,0.22)] border-dashed left-[105.35px] rounded-[188.163px] size-[376.325px] top-[105.35px]" data-node-id="11:825" data-name="Container">
+        <div class="absolute grid grid-cols-[_58.70px] grid-rows-[_58.70px] left-[267.55px] size-[59.349px] top-[309.1px]" data-node-id="11:826" data-name="Text">
+          <div class="col-1 grid grid-cols-[_32.31px] grid-rows-[_58.70px] justify-self-center min-w-[58.6995849609375px] px-[13.207px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[59.349px]" data-node-id="11:827" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[28.326px] items-start justify-self-center relative row-1 self-center shrink-0 w-[24.279px]" data-node-id="11:828" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[28.176px] not-italic relative shrink-0 text-[17.61px] text-[rgba(16,27,51,0.46)] tracking-[-0.3522px] whitespace-nowrap" data-node-id="11:829">
+                KG
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_58.70px] grid-rows-[_58.70px] left-[46.73px] size-[59.349px] top-[309.1px]" data-node-id="11:830" data-name="Text">
+          <div class="col-1 drop-shadow-[0px_13.488px_22.93px_rgba(61,123,255,0.55)] grid grid-cols-[_32.31px] grid-rows-[_58.70px] justify-self-center min-w-[58.6995849609375px] px-[13.207px] relative rounded-[1347.487px] row-1 self-center shrink-0 size-[59.349px]" data-node-id="11:831" style="background-image: linear-gradient(150.00000044529205deg, rgb(126, 176, 238) 7.735%, rgb(135, 184, 242) 92.265%)" data-name="Italic Text">
+            <div class="col-1 content-stretch flex flex-col h-[28.326px] items-start justify-self-center relative row-1 self-center shrink-0 w-[22.93px]" data-node-id="11:832" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[28.176px] not-italic relative shrink-0 text-[17.61px] text-[color:var(--on-brand,white)] tracking-[-0.3522px] whitespace-nowrap" data-node-id="11:833">
+                R$
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_58.70px] grid-rows-[_58.70px] left-[-21.51px] size-[59.349px] top-[99.09px]" data-node-id="11:834" data-name="Text">
+          <div class="col-1 grid grid-cols-[_32.31px] grid-rows-[_58.70px] justify-self-center min-w-[58.6995849609375px] px-[13.207px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[59.349px]" data-node-id="11:835" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[28.326px] items-start justify-self-center relative row-1 self-center shrink-0 w-[24.279px]" data-node-id="11:836" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[28.176px] not-italic relative shrink-0 text-[17.61px] text-[rgba(16,27,51,0.46)] tracking-[-0.3522px] whitespace-nowrap" data-node-id="11:837">
+                GR
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_58.70px] grid-rows-[_58.70px] left-[157.14px] size-[59.349px] top-[-30.7px]" data-node-id="11:838" data-name="Text">
+          <div class="col-1 grid grid-cols-[_32.31px] grid-rows-[_58.70px] justify-self-center min-w-[58.6995849609375px] px-[13.207px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[59.349px]" data-node-id="11:839" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[28.326px] items-start justify-self-center relative row-1 self-center shrink-0 w-[14.837px]" data-node-id="11:840" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[28.176px] not-italic relative shrink-0 text-[17.61px] text-[rgba(16,27,51,0.46)] tracking-[-0.3522px] whitespace-nowrap" data-node-id="11:841">
+                %
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+        <div class="absolute grid grid-cols-[_58.70px] grid-rows-[_58.70px] left-[335.78px] size-[59.349px] top-[99.09px]" data-node-id="11:842" data-name="Text">
+          <div class="col-1 grid grid-cols-[_32.31px] grid-rows-[_58.70px] justify-self-center min-w-[58.6995849609375px] px-[13.207px] relative rounded-[1347.487px] row-1 self-center shadow-[0px_2.698px_8.093px_0px_rgba(16,27,51,0.04),0px_16.186px_43.163px_0px_rgba(16,27,51,0.1)] shrink-0 size-[59.349px]" data-node-id="11:843" data-name="Italic Text">
+            <div aria-hidden="true" class="absolute bg-[rgba(255,255,255,0.92)] inset-0 pointer-events-none rounded-[1347.487px]"></div>
+            <div class="col-1 content-stretch flex flex-col h-[28.326px] items-start justify-self-center relative row-1 self-center shrink-0 w-[25.628px]" data-node-id="11:844" data-name="Text">
+              <p class="[word-break:break-word] font-inter font-bold font-bold leading-[28.176px] not-italic relative shrink-0 text-[17.61px] text-[rgba(16,27,51,0.46)] tracking-[-0.3522px] whitespace-nowrap" data-node-id="11:845">
+                UN
+              </p>
+            </div>
+            <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(16,27,51,0.13)]"></div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute h-[25.628px] left-[181.97px] top-[374.43px] w-[223.043px]" data-node-id="11:846" data-name="Text"></div>
+    </div>
+    <div class="col-3 content-stretch flex flex-col gap-[13.488px] items-end justify-self-stretch relative row-1 self-center shrink-0" data-node-id="11:853" data-name="Container" data-fit="437.49">
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:854" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:855" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[339.021px]" data-node-id="11:856" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:857" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:858">
+              Consumo teórico
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[304.86px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:859">
+              agora
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col items-start pt-[1.349px] relative shrink-0 w-[339.021px]" data-node-id="11:860" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] w-[339.907px]" data-node-id="11:861">
+              <span class="leading-[21.716px] text-[15.512px]">Calculado</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> 22,4 kg de mussarela deveriam ter saído</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:862" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:863" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[299.147px]" data-node-id="11:864" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:865" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:866">
+              Estoque real
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[268.42px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:867">
+              1 min
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[24.279px] items-start pt-[1.349px] relative shrink-0 w-[299.147px]" data-node-id="11:868" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] whitespace-nowrap" data-node-id="11:869">
+              <span class="leading-[21.716px] text-[15.512px]">Contado</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> 30 kg na câmara hoje de manhã</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:870" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:871" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[325.786px]" data-node-id="11:872" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:873" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:874">
+              Diferença
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[292.78px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:875">
+              4 min
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[24.279px] items-start pt-[1.349px] relative shrink-0 w-[325.786px]" data-node-id="11:876" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] whitespace-nowrap" data-node-id="11:877">
+              <span class="leading-[21.716px] text-[15.512px]">Achamos</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> 12 kg que não passaram por venda</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:878" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:879" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[339.021px]" data-node-id="11:880" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:881" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:882">
+              CMV do mês
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[306.9px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:883">
+              9 min
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col items-start pt-[1.349px] relative shrink-0 w-[339.021px]" data-node-id="11:884" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] w-[339.907px]" data-node-id="11:885">
+              <span class="leading-[21.716px] text-[15.512px]">Fechou em</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> 38,4%, cinco pontos acima do ideal</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+      <div class="content-stretch flex gap-[14.837px] items-center px-[18.884px] py-[14.837px] relative rounded-[18.884px] shadow-[0px_5.395px_16.186px_0px_rgba(16,27,51,0.06),0px_43.163px_86.326px_0px_rgba(16,27,51,0.16)] shrink-0 w-[437.487px]" data-node-id="11:886" data-name="Article">
+        <div aria-hidden="true" class="absolute backdrop-blur-[16.186px] bg-[rgba(255,255,255,0.95)] inset-0 pointer-events-none rounded-[18.884px]"></div>
+        <div class="bg-[#7eb0ee] relative rounded-[13.488px] shrink-0 size-[45.86px]" data-node-id="11:887" data-name="Text"></div>
+        <div class="content-stretch flex flex-col items-start relative shrink-0 w-[321.529px]" data-node-id="11:888" data-name="Container">
+          <div class="[word-break:break-word] h-[24.806px] not-italic relative shrink-0 tracking-[-0.1036px] w-full whitespace-nowrap" data-node-id="11:889" data-name="Container">
+            <p class="absolute font-inter font-bold font-bold leading-[24.819px] left-0 text-[#101b33] text-[15.512px] top-0" data-node-id="11:890">
+              Vazamento
+            </p>
+            <p class="absolute font-inter font-normal leading-[20.502px] left-[283.11px] text-[12.814px] text-[rgba(16,27,51,0.46)] top-[2.7px]" data-node-id="11:891">
+              15 min
+            </p>
+          </div>
+          <div class="content-stretch flex flex-col h-[24.279px] items-start pt-[1.349px] relative shrink-0 w-[321.529px]" data-node-id="11:892" data-name="Paragraph">
+            <p class="[word-break:break-word] font-inter font-semibold font-semibold leading-[0] not-italic relative shrink-0 text-[#101b33] text-[0px] tracking-[-0.1036px] whitespace-nowrap" data-node-id="11:893">
+              <span class="leading-[21.716px] text-[15.512px]">Isso vale</span><span class="font-inter font-normal leading-[21.716px] text-[15.512px] text-[rgba(16,27,51,0.78)]"> R$ 5.000 por mês na sua operação</span>
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0px_rgba(255,255,255,0.95)]"></div>
+      </div>
+    </div>
+  </div>
+  <div class="orbit-foot relative flex flex-col items-center pt-[69.06px] w-full" data-node-id="11:894" data-name="Paragraph:margin">
+    <div class="content-stretch flex flex-col items-center max-w-[873.6936645507812px] relative shrink-0 w-[873.687px]" data-node-id="11:895" data-name="Paragraph">
+      <p class="[word-break:break-word] font-inter font-medium font-medium leading-[38.674px] not-italic relative shrink-0 text-[#101b33] text-[24.171px] text-center tracking-[-0.4834px] whitespace-nowrap" data-node-id="11:896">
+        A diferença entre os dois é o seu dinheiro. Agora visível, todo dia.
+      </p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. SIMPLES DE COMEÇAR (Figma y 3999–6125) ============ -->
+<section class="sec sec-simples" style="--h:2126px">
+  <div class="cv">
+    <h2 class="a font-instrument font-normal text-[70px] leading-[80px] tracking-[-2.226px] text-[#101b33] text-center" style="--x:601px;--y:122px;--w:719px">
+      Simples de começar.<br><span class="font-semibold text-[#3d7bff]">Difícil de largar</span> depois.
+    </h2>
+
+    <div class="steps">
+      <!-- Card grande -->
+      <article class="a step step--big" style="--x:428px;--y:347.08px;--w:584.43px">
+        <div class="step__img h-[381.1px] border-[1.279px] border-[#e5e5e5]">
+          <div class="absolute bg-[#d9d9d9] inset-0 rounded-[44.76px]"></div>
+          <img src="assets/card-assistencia.jpg" alt="Equipe montando produtos, ingredientes, fichas técnicas, fornecedores e custos" class="absolute inset-0 max-w-none object-cover rounded-[44.76px] size-full">
+        </div>
+        <h3 class="step-big__title font-instrument font-normal text-[30.51px] leading-[59.956px] tracking-[-1.6683px] text-[#101b33] whitespace-nowrap">A gente monta com você</h3>
+        <p class="step-big__txt font-inter text-[22.37px] leading-[34.674px] tracking-[-0.1278px] text-[rgba(16,27,51,0.78)]">
+          Na implantação assistida, nossa equipe cadastra junto seus produtos, ingredientes, fichas técnicas, fornecedores e custos. Ninguém fica sozinho numa tela.
+        </p>
+      </article>
+
+      <!-- Card: puxa vendas -->
+      <article class="a step step--sm1" style="--x:1047px;--y:347px;--w:445px">
+        <div class="step__img h-[168px] border-[1.28px] border-[#e5e5e5]">
+          <img src="assets/card-vendas.jpg" alt="Vendas realizadas viram consumo teórico" class="absolute h-[213.39%] left-[-0.01%] max-w-none top-[-43.47%] w-[100.01%]">
+        </div>
+        <div class="step-sm__body">
+          <h3 class="font-instrument font-normal text-[30.512px] leading-[45.734px] tracking-[-1.2725px] text-[#101b33] whitespace-nowrap">A gente puxa suas vendas</h3>
+          <p class="step-sm__p font-inter text-[13.44px] leading-[20.832px] tracking-[-0.0768px] text-[rgba(16,27,51,0.78)]">O sistema lê suas vendas e transforma em consumo teórico sozinho. Nenhuma planilha no meio.</p>
+          <ul class="step-list">
+            <li><span class="dot"></span><span class="font-inter text-[12px] leading-[19.2px] tracking-[-0.0768px] text-[rgba(16,27,51,0.78)] whitespace-nowrap">Importando vendas de ontem</span><b>✓</b></li>
+            <li><span class="dot"></span><span class="font-inter text-[12px] leading-[19.2px] tracking-[-0.0768px] text-[rgba(16,27,51,0.78)] whitespace-nowrap">Aplicando fichas técnicas</span><b>✓</b></li>
+            <li><span class="dot"></span><span class="font-inter text-[12px] leading-[19.2px] tracking-[-0.0768px] text-[rgba(16,27,51,0.78)] whitespace-nowrap">Calculando consumo teórico</span><b>✓</b></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Card: vê o buraco -->
+      <article class="a step step--sm2" style="--x:1047px;--y:844px;--w:445px">
+        <div class="step__img h-[168px] border-[1.28px] border-[#e5e5e5]">
+          <img src="assets/card-buraco.png" alt="Painel com CMV hoje, meta e gap em reais" class="absolute inset-0 max-w-none object-cover rounded-[44.76px] size-full">
+        </div>
+        <div class="step-sm__body step-sm__body--2">
+          <h3 class="font-inter font-normal text-[30px] leading-[35.2px] tracking-[-0.55px] text-[#101b33] whitespace-nowrap">Você vê o buraco</h3>
+          <p class="step-sm__p2 font-inter text-[13.44px] leading-[20.832px] tracking-[-0.0768px] text-[rgba(16,27,51,0.78)]">Todo dia: o CMV real, onde está escapando e quanto isso vale em reais. A decisão fica óbvia.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="a whats" id="whatsapp" style="--x:408px;--y:1259px;--w:1084px">
+      <div class="whats__text">
+        <h2 class="font-instrument font-normal text-[48.019px] leading-[50.9px] tracking-[-2.0168px]">
+          <span class="block text-[#101b33] whitespace-nowrap">Pergunte pro seu estoque.</span>
+          <span class="inline-block bg-clip-text text-transparent whitespace-nowrap" style="background-image:linear-gradient(119.45deg, rgb(74,134,255) 4.2556%, rgb(46,107,240) 42.681%, rgb(27,69,184) 95.744%)">Ele responde.</span>
+        </h2>
+        <p class="whats__p1 font-inter text-[16.236px] leading-[25.977px] tracking-[-0.0696px] text-[rgba(16,27,51,0.78)]">Texto ou áudio, na mesma tela onde você já resolve o resto do dia. Sem abrir sistema, sem relatório, sem esperar.</p>
+        <p class="whats__p2 font-inter text-[12.177px] leading-[19.483px] tracking-[-0.0696px] text-[rgba(16,27,51,0.46)]">A tecnologia por trás é complicada. O que chega pra você é a resposta certa, na hora certa.</p>
+        <a href="#diagnostico" class="btn-pill btn-whats">
+          <span class="btn-pill__label font-instrument text-[14.274px]">QUERO ISSO NA MINHA PIZZARIA</span>
+          <span class="btn-pill__arrow"><img src="assets/seta-cta.svg" alt="" class="-rotate-90 w-[18.965px] h-[18.701px]"></span>
+        </a>
+      </div>
+
+      <!-- Chat (Figma 38:50) -->
+      <div data-fit="362.41" class="chat content-stretch flex flex-col items-start overflow-clip relative rounded-[30.805px] shadow-[0px_45.301px_81.541px_-36.241px_rgba(16,27,51,0.45)] w-[362.406px]">
+        <div aria-hidden="true" class="absolute inset-0 pointer-events-none rounded-[30.805px]" style="background-image:linear-gradient(157.2deg, rgb(236,239,255) 8.4861%, rgb(223,229,255) 91.514%)"></div>
+        <div class="bg-[rgba(255,255,255,0.6)] border-[rgba(16,27,51,0.13)] border-b-[0.906px] border-solid flex gap-[9.966px] items-center px-[16.308px] py-[14.496px] relative shrink-0 w-full">
+          <div class="bg-gradient-to-b from-[#4a86ff] via-[#2a63e6] via-[52%] to-[#1f4fcc] grid place-items-center rounded-[17.214px] shrink-0 size-[34.429px]">
+            <p class="font-inter font-medium leading-[15.946px] text-[#0c7038] text-[9.966px] tracking-[-0.0696px]">A</p>
+          </div>
+          <div class="flex flex-col items-start w-[74.322px]">
+            <p class="font-inter font-semibold leading-[20.295px] text-[#101b33] text-[12.684px] tracking-[-0.0696px] whitespace-nowrap">AbasteceAê</p>
+            <p class="font-inter font-medium leading-[15.946px] text-[#0c7038] text-[9.966px] tracking-[-0.0696px] whitespace-nowrap -mt-[1.81px]">online</p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-b from-[rgba(223,229,255,0.5)] to-[rgba(223,229,255,0.9)] flex flex-col gap-[8.154px] h-[298.985px] items-start justify-end p-[16.308px] relative shrink-0 w-full">
+          <div class="flex flex-col items-end w-full">
+            <div class="bg-[#2a63e6] drop-shadow-[0px_5.436px_8.154px_rgba(61,123,255,0.6)] px-[12.684px] py-[9.966px] rounded-[14.496px] rounded-br-[4.53px]">
+              <p class="font-inter leading-[16.988px] text-[11.325px] text-white tracking-[-0.0696px] whitespace-nowrap">Quanto tenho de mussarela?</p>
+            </div>
+          </div>
+          <div class="bg-white drop-shadow-[0px_1.812px_1.812px_rgba(16,27,51,0.06)] shadow-[0px_7.248px_9.06px_rgba(16,27,51,0.22)] px-[12.684px] py-[9.966px] rounded-[14.496px] rounded-bl-[4.53px]">
+            <div class="font-inter text-[#101b33] text-[11.325px] leading-[16.988px] tracking-[-0.0696px] w-[239.188px]">
+              <p><b class="font-bold">12,4 kg</b> em estoque agora.</p>
+              <p>Dá pra mais ou menos <b class="font-bold">78 pizzas</b> no seu mix atual.</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end w-full">
+            <div class="bg-[#2a63e6] drop-shadow-[0px_5.436px_8.154px_rgba(61,123,255,0.6)] px-[12.684px] py-[9.966px] rounded-[14.496px] rounded-br-[4.53px]">
+              <p class="font-inter leading-[16.988px] text-[11.325px] text-white tracking-[-0.0696px] whitespace-nowrap">Quanto consumi de calabresa ontem?</p>
+            </div>
+          </div>
+          <div class="bg-white drop-shadow-[0px_1.812px_1.812px_rgba(16,27,51,0.06)] shadow-[0px_7.248px_9.06px_rgba(16,27,51,0.22)] px-[12.684px] py-[9.966px] rounded-[14.496px] rounded-bl-[4.53px]">
+            <div class="font-inter text-[#101b33] text-[11.325px] leading-[16.988px] tracking-[-0.0696px] whitespace-nowrap">
+              <p>Ontem saíram <b class="font-bold">6,8 kg</b>.</p>
+              <p>Pelas vendas, deveriam ter saído <b class="font-bold">6,0 kg</b>.</p>
+              <p class="font-semibold text-[#b3282c]">Sobrou 13% de consumo sem venda.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[rgba(255,255,255,0.5)] border-[rgba(16,27,51,0.13)] border-t-[0.906px] border-solid flex gap-[9.06px] items-center px-[16.308px] py-[12.684px] relative shrink-0 w-full">
+          <p class="font-inter leading-[18.12px] text-[11.325px] text-[rgba(16,27,51,0.62)] tracking-[-0.0696px] whitespace-nowrap">Mensagem</p>
+          <div class="flex flex-1 justify-end"><div class="bg-[#0c7038] rounded-[13.59px] size-[27.18px]"></div></div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_0.906px_rgba(16,27,51,0.13)]"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. DIAGNÓSTICO (Figma y 6125–7087) ============ -->
+<section class="sec sec-diag" style="--h:962px" id="diagnostico">
+  <div class="cv">
+    <div class="a diag-head" style="--x:416px;--y:109px;--w:1124.8px">
+      <h2 class="font-instrument font-normal leading-[56.18px] text-[#101b33] text-[53px] text-center tracking-[-2.226px]">Antes de assinar nada, descubra quanto está perdendo.</h2>
+      <p class="font-inter leading-[28.672px] text-[17.92px] text-[rgba(16,27,51,0.78)] text-center tracking-[-0.0768px]">Você passa alguns números da operação: faturamento médio, pizzas vendidas, principais insumos e custos, estoque atual. A gente devolve:</p>
+    </div>
+    <div class="a diag-grid" style="--x:416px;--y:457px;--w:1124.81px">
+      <ul class="diag-list">
+        <li class="diag-item">
+          <span class="check"></span>
+          <p class="diag-item__t font-inter font-semibold leading-[28.672px] text-[#101b33] text-[17.92px] tracking-[-0.3584px]">Qual deveria ser o seu CMV</p>
+          <p class="diag-item__s font-inter leading-[20.8px] text-[13px] text-[rgba(16,27,51,0.78)] tracking-[-0.0768px]">calculado com as suas fichas e as suas vendas</p>
+        </li>
+        <li class="diag-item">
+          <span class="check"></span>
+          <p class="diag-item__t font-inter font-semibold leading-[28.672px] text-[#101b33] text-[17.92px] tracking-[-0.3584px]">Onde ele provavelmente está hoje</p>
+          <p class="diag-item__s font-inter leading-[20.8px] text-[13px] text-[rgba(16,27,51,0.78)] tracking-[-0.0768px]">o retrato da sua operação, sem achismo</p>
+        </li>
+        <li class="diag-item">
+          <span class="check"></span>
+          <p class="diag-item__t font-inter font-semibold leading-[28.672px] text-[#101b33] text-[17.92px] tracking-[-0.3584px]">Quanto isso vale em reais por mês</p>
+          <p class="diag-item__s font-inter leading-[20.8px] text-[13px] text-[rgba(16,27,51,0.78)] tracking-[-0.0768px]">o número que transforma planilha em decisão</p>
+        </li>
+      </ul>
+      <aside class="diag-card">
+        <div aria-hidden="true" class="absolute inset-0 pointer-events-none rounded-[32px]" style="background-image:linear-gradient(165.85deg, rgb(236,239,255) 8.4861%, rgb(223,229,255) 91.514%)"></div>
+        <span class="relative ml-[125.23px] bg-gradient-to-b from-[#4a86ff] via-[#2a63e6] via-[52%] to-[#1f4fcc] rounded-full h-[25.188px] w-[151.047px] grid place-items-center font-inter font-bold leading-[15.2px] text-[9.5px] text-white tracking-[1.045px] whitespace-nowrap">GRÁTIS · SEM CARTÃO</span>
+        <h3 class="relative pt-[16px] font-tight font-semibold leading-[48px] text-[#101b33] text-[30px] text-center tracking-[-0.9px] whitespace-nowrap">Diagnóstico de CMV</h3>
+        <p class="relative pt-[10px] pb-[22px] font-inter leading-[21.504px] text-[13.44px] text-[rgba(16,27,51,0.62)] text-center tracking-[-0.0768px]">Se estiver tudo redondo, ótimo: você dorme tranquilo. Se tiver vazamento, você vai querer resolver hoje.</p>
+        <a href="#diagnostico" class="relative btn-pill btn-diag">
+          <span class="btn-pill__label font-instrument font-semibold text-[13.989px] leading-[22.382px] tracking-[-0.0699px] uppercase">Solicitar minha análise gratuita</span>
+          <span class="btn-pill__arrow"><img src="assets/seta-cta.svg" alt="" class="-rotate-90 w-[18.965px] h-[18.701px]"></span>
+        </a>
+        <ul class="relative flex gap-[16px] justify-center pt-[18px] w-full">
+          <li class="flex gap-[6px] items-center"><span class="bg-[#3d7bff] rounded-[2px] size-[4px]"></span><span class="font-inter leading-[18.4px] text-[11.5px] text-[rgba(16,27,51,0.62)] tracking-[-0.0768px] whitespace-nowrap">Resposta em até 24h</span></li>
+          <li class="flex gap-[6px] items-center"><span class="bg-[#3d7bff] rounded-[2px] size-[4px]"></span><span class="font-inter leading-[18.4px] text-[11.5px] text-[rgba(16,27,51,0.62)] tracking-[-0.0768px] whitespace-nowrap">Sem instalação</span></li>
+          <li class="flex gap-[6px] items-center"><span class="bg-[#3d7bff] rounded-[2px] size-[4px]"></span><span class="font-inter leading-[18.4px] text-[11.5px] text-[rgba(16,27,51,0.62)] tracking-[-0.0768px] whitespace-nowrap">Sem compromisso</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. FAIXA AZUL R$ 5.000 (Figma y 7087–7916) ============ -->
+<section class="sec sec-band" style="--h:829px">
+  <div class="cv">
+    <div class="a band-pill" style="--x:0px;--y:86px;--w:1920px">
+      <span class="band-pill__in">
+        <span aria-hidden="true" class="absolute backdrop-blur-[14px] bg-[rgba(255,255,255,0.1)] inset-0 rounded-full"></span>
+        <span class="relative bg-gradient-to-b from-[#4a86ff] via-[#2a63e6] via-[52%] to-[#1f4fcc] px-[10px] py-[4px] rounded-full font-inter font-bold leading-[16.8px] text-[#1f4fcc] text-[10.5px] tracking-[0.42px] whitespace-nowrap">A conta</span>
+        <span class="relative font-inter font-medium leading-[20px] text-[12.5px] text-[rgba(255,255,255,0.88)] tracking-[-0.0768px] whitespace-nowrap">que ninguém tinha feito</span>
+      </span>
+    </div>
+    <p class="a band-lead font-inter text-[17.92px] leading-[28.672px] text-[rgba(255,255,255,0.72)] text-center tracking-[-0.0768px]" style="--x:669px;--y:142.8px;--w:582px">
+      Uma pizzaria que fatura <b class="font-semibold text-white">R$ 100 mil por mês</b> com o CMV <b class="font-semibold text-white">5 pontos</b> acima do ideal deixa
+    </p>
+    <p class="a band-big font-tight font-bold leading-[121.6px] text-[128px] text-center tracking-[-7.04px] whitespace-nowrap" style="--x:393px;--y:222.8px;--w:1134.09px">R$ 5.000</p>
+    <p class="a band-per font-tight font-semibold leading-[19.456px] text-[20.48px] text-[rgba(255,255,255,0.66)] text-center tracking-[2.048px] uppercase" style="--x:393px;--y:344.39px;--w:1134.09px">por mês</p>
+    <p class="a band-sub font-inter text-[17.92px] leading-[28.672px] text-[rgba(255,255,255,0.72)] text-center tracking-[-0.0768px]" style="--x:669.06px;--y:398.39px;--w:581.95px">
+      parados no estoque. São <b class="font-semibold text-white">R$ 60 mil por ano</b> que já eram seus.
+    </p>
+    <ul class="a band-stats" style="--x:393px;--y:478.59px;--w:1134.09px">
+      <li><b>38,4%</b><span>CMV real hoje</span></li>
+      <li><b>5 pts</b><span>acima do ideal</span></li>
+      <li><b>12 kg</b><span>sem venda no mês</span></li>
+      <li><b>24h</b><span>para o diagnóstico</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 8. QUEM SOMOS + SEGMENTOS + TESTE (Figma y 7916–9534) ============ -->
+<section class="sec sec-sobre" style="--h:1618px">
+  <div class="cv">
+    <div class="a sobre" style="--x:398px;--y:150px;--w:1124.81px">
+      <div class="sobre__text">
+        <h2 class="font-tight font-semibold leading-[56.18px] text-[#101b33] text-[53px] tracking-[-2.226px] max-w-[501px]">
+          A gente nasceu pra parar o dinheiro que
+          <span class="block bg-clip-text text-transparent whitespace-nowrap w-fit" style="background-image:linear-gradient(126.48deg, rgb(74,134,255) 4.2556%, rgb(46,107,240) 42.681%, rgb(27,69,184) 95.744%)">some da cozinha</span>
+          <span class="block">.</span>
+        </h2>
+        <div class="sobre__ps font-inter leading-[28.672px] text-[17.92px] text-[rgba(16,27,51,0.78)] tracking-[-0.0768px]">
+          <p>Dono de restaurante é especialista em fazer comida boa e atender bem. Não em cruzar venda com estoque numa planilha às 23h. Esse trabalho a gente assume.</p>
+          <p>Somos especializados em operação que gira muito insumo: pizzaria, hamburgueria, açaí, sushi e delivery de alto volume. É onde o desperdício se esconde melhor.</p>
+        </div>
+      </div>
+      <div class="sobre__foto">
+        <div class="font-inter font-medium text-[10px] text-[rgba(16,27,51,0.46)] text-center tracking-[0.9px] leading-[20px] whitespace-nowrap self-center justify-self-center">
+          <p>SUBSTITUIR</p><p>foto do time / dono de pizzaria</p><p>&#8203;</p>
+        </div>
+        <p class="font-inter font-semibold leading-[20px] text-[10px] text-[#3d7bff] text-center tracking-[0.9px] whitespace-nowrap self-center justify-self-center">640 × 760</p>
+      </div>
+    </div>
+
+    <div class="a segs" style="--x:-56px;--y:780px;--w:2982.7px">
+      <span class="seg">Pizzarias</span>
+      <span class="seg">Hamburguerias</span>
+      <span class="seg">Açaí</span>
+      <span class="seg">Sushi</span>
+      <span class="seg">Delivery de alto volume</span>
+      <span class="seg">Pizzarias</span>
+      <span class="seg">Hamburguerias</span>
+      <span class="seg">Açaí</span>
+      <span class="seg seg--glow">Sushi</span>
+      <span class="seg seg--glow">Delivery de alto volume</span>
+    </div>
+
+    <div class="a teste" id="teste" style="--x:428px;--y:1078px;--w:1124.81px">
+      <div class="teste__text">
+        <h2 class="font-tight font-semibold leading-[56.18px] text-[#101b33] text-[53px] tracking-[-2.226px]">
+          <span class="block whitespace-nowrap">14 dias de teste. E</span>
+          <span class="block bg-clip-text text-transparent whitespace-nowrap w-fit" style="background-image:linear-gradient(127.42deg, rgb(74,134,255) 4.2556%, rgb(46,107,240) 42.681%, rgb(27,69,184) 95.744%)">a gente configura</span>
+          <span class="block whitespace-nowrap">com você.</span>
+        </h2>
+        <p class="pt-[18px] font-inter leading-[28.672px] text-[17.92px] text-[rgba(16,27,51,0.78)] tracking-[-0.0768px] max-w-[584px]">Você usa o sistema completo por 14 dias. Nesse período nossa equipe cadastra com você produtos, fichas técnicas, fornecedores, custos e a integração com as vendas.</p>
+        <div class="pt-[18px]">
+          <p class="border-l-[3px] border-[#3d7bff] pl-[18px] font-inter font-medium leading-[28.672px] text-[#101b33] text-[17.92px] tracking-[-0.3584px] max-w-[584px]">Quando o teste acaba, você não tem um sistema pra configurar. Você tem a sua operação rodando dentro dele.</p>
+        </div>
+        <div class="pt-[18px]">
+          <a href="#diagnostico" class="btn-grad h-[56.563px] w-[301.5px]">
+            <span class="btn-grad__shine" style="left:-362.05px;width:302px;background-image:linear-gradient(144.84deg, rgba(255,255,255,0) 36.475%, rgba(255,255,255,0.42) 48.309%, rgba(255,255,255,0.08) 56.762%, rgba(255,255,255,0) 66.906%)"></span>
+            <span class="relative font-inter font-semibold leading-[24.576px] text-[15.36px] text-white tracking-[-0.0768px] whitespace-nowrap">Começar meu teste de 14 dias</span>
+            <img src="assets/icone-seta.svg" alt="" class="relative size-[15px]">
+          </a>
+        </div>
+      </div>
+      <ol class="timeline">
+        <span class="timeline__track"></span>
+        <span class="timeline__fill"></span>
+        <li><i></i><b>Dia 1</b><span>Cadastro de produtos e ingredientes</span></li>
+        <li><i></i><b>Dia 3</b><span>Fichas técnicas montadas com você</span></li>
+        <li><i></i><b>Dia 7</b><span>Fornecedores e custos no lugar</span></li>
+        <li><i></i><b>Dia 10</b><span>Vendas integradas, consumo teórico rodando</span></li>
+        <li class="is-last"><i></i><b>Dia 14</b><span>Sua operação já dentro do sistema</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. INDICAÇÃO (Figma y 9534–10563) ============ -->
+<section class="sec sec-indica" style="--h:1029px">
+  <div class="bg-img" style="left:calc(50% - 1122px);top:0;width:2082px;height:1029px">
+    <img src="assets/bg-etereo.jpg" alt="" class="absolute h-[113.02%] left-[-0.04%] max-w-none top-0 w-[100.08%]">
+  </div>
+  <div class="cv">
+    <div class="a indica-head" style="--x:235px;--y:140px;--w:1490.8px">
+      <h2 class="font-instrument font-normal leading-[74.46px] text-[#101b33] text-[70.246px] text-center tracking-[-2.9503px] max-w-[967.5px] mx-auto">Conhece outro dono que vive reclamando de estoque?</h2>
+      <p class="pt-[21.206px] font-instrument leading-[38.002px] text-[23.751px] text-[rgba(16,27,51,0.78)] text-center tracking-[-0.1018px]">Restaurante conversa com restaurante. A gente recompensa isso.</p>
+    </div>
+    <div class="a indica-cards" style="--x:235px;--y:407.73px;--w:1490.8px">
+      <article class="ind-card">
+        <div aria-hidden="true" class="absolute backdrop-blur-[18.555px] inset-0 pointer-events-none rounded-[42.413px]" style="background-image:linear-gradient(168.9deg, rgba(255,255,255,0.97) 8.4861%, rgba(242,246,255,0.82) 91.514%)"></div>
+        <span class="ind-num bg-[#dfe5ff] text-[#1f4fcc]">1</span>
+        <p class="ind-txt text-[rgba(16,27,51,0.78)]">Indique um restaurante que fechar</p>
+        <p class="ind-big text-[#3d7bff]">1 mês grátis</p>
+      </article>
+      <article class="ind-card ind-card--blue">
+        <div aria-hidden="true" class="absolute backdrop-blur-[18.555px] bg-[#2a63e6] inset-0 pointer-events-none rounded-[42.413px]"></div>
+        <span class="ind-num bg-[rgba(255,255,255,0.2)] text-white">3</span>
+        <p class="ind-txt text-[rgba(255,255,255,0.78)]">Indique três</p>
+        <p class="ind-big text-white">3 meses grátis</p>
+      </article>
+    </div>
+    <div class="a indica-cta" style="--x:235px;--y:737.3px;--w:1490.8px">
+      <a href="#diagnostico" class="btn-grad h-[74.967px] w-[425.968px] px-[37.111px] gap-[11.197px] shadow-[0px_13.254px_45.063px_-13.254px_rgba(61,123,255,0.55)]">
+        <span class="btn-grad__shine" style="left:-510.9px;width:425.45px;height:75.55px;background-image:linear-gradient(146.47deg, rgba(255,255,255,0) 36.475%, rgba(255,255,255,0.42) 48.309%, rgba(255,255,255,0.08) 56.762%, rgba(255,255,255,0) 66.906%)"></span>
+        <span class="relative font-inter font-semibold leading-[32.573px] text-[20.358px] text-white tracking-[-0.1018px] whitespace-nowrap">Quero indicar e ganhar meses grátis</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. FAQ (Figma y 10563–11400) ============ -->
+<section class="sec sec-faq" style="--h:837px" id="duvidas">
+  <div class="cv">
+    <h2 class="a font-tight font-semibold leading-[56.18px] text-[#101b33] text-[53px] text-center tracking-[-2.226px] whitespace-nowrap" style="--x:398px;--y:130px;--w:1124.8px">Ainda em dúvida?</h2>
+    <div class="a faq" style="--x:510.4px;--y:227px;--w:900px">
+      <details class="faq-item" open>
+        <summary><span>Preciso ter ficha técnica pronta?</span><i></i></summary>
+        <p>Não. A gente monta junto na implantação.</p>
+      </details>
+      <details class="faq-item" open>
+        <summary><span>Serve só pra pizzaria?</span><i></i></summary>
+        <p class="w-[544px]">O foco é pizzaria, mas funciona em hamburgueria, açaí, sushi, delivery de alto volume e restaurante de pequeno e médio porte. Qualquer operação que gire muito insumo.</p>
+      </details>
+      <details class="faq-item" open>
+        <summary><span>É difícil de usar no dia a dia?</span><i></i></summary>
+        <p>As respostas chegam no WhatsApp. Se você usa WhatsApp, você usa a AbasteceAê.</p>
+      </details>
+      <details class="faq-item" open>
+        <summary><span>E se eu não tiver perda nenhuma?</span><i></i></summary>
+        <p class="w-[544px]">Melhor ainda: o diagnóstico te dá essa certeza. Mas na prática, quase toda operação tem vazamento que não aparece no caixa.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. CTA FINAL (Figma y 11400–12064) ============ -->
+<footer class="sec sec-final" style="--h:664px">
+  <div class="cv">
+    <h2 class="a font-instrument font-normal leading-[89.6px] text-[#101b33] text-[56px] text-center tracking-[-2.352px] final-h" style="--x:0px;--y:71px;--w:1920px">Você não precisa trocar de sistema hoje.</h2>
+    <p class="a final-h2" style="--x:0px;--y:161px;--w:1920px">
+      <span class="inline-block bg-clip-text text-transparent font-instrument leading-[89.6px] text-[56px] tracking-[-2.352px]" style="background-image:linear-gradient(134.86deg, rgb(74,134,255) 4.2556%, rgb(46,107,240) 42.681%, rgb(27,69,184) 95.744%)">Precisa saber quanto está perdendo.</span>
+    </p>
+    <p class="a font-inter leading-[28.672px] text-[17.92px] text-[rgba(16,27,51,0.78)] text-center tracking-[-0.0768px]" style="--x:623.73px;--y:278px;--w:672px">Comece pelo diagnóstico gratuito. Sem compromisso, sem instalação. Só os seus números dizendo a verdade.</p>
+    <div class="a final-btns" style="--x:662.35px;--y:395px;--w:594.78px">
+      <a href="#diagnostico" class="btn-grad h-[56.563px] w-[312.19px]">
+        <span class="btn-grad__shine" style="left:-374.53px;width:312px;background-image:linear-gradient(145.71deg, rgba(255,255,255,0) 36.475%, rgba(255,255,255,0.42) 48.309%, rgba(255,255,255,0.08) 56.762%, rgba(255,255,255,0) 66.906%)"></span>
+        <span class="relative font-inter font-semibold leading-[24.576px] text-[15.36px] text-white text-center tracking-[-0.0768px] whitespace-nowrap">Quero meu diagnóstico gratuito</span>
+        <img src="assets/icone-seta.svg" alt="" class="relative size-[15px]">
+      </a>
+      <a href="#" class="btn-grad btn-grad--green h-[56.563px] w-[270.59px]">
+        <span class="btn-grad__shine" style="left:-324.92px;width:271px;background-image:linear-gradient(141.87deg, rgba(255,255,255,0) 36.475%, rgba(255,255,255,0.42) 48.309%, rgba(255,255,255,0.08) 56.762%, rgba(255,255,255,0) 66.906%)"></span>
+        <img src="assets/icone-whatsapp.svg" alt="" class="relative size-[15px]">
+        <span class="relative font-inter font-semibold leading-[24.576px] text-[15.36px] text-white text-center tracking-[-0.0768px] whitespace-nowrap">Falar com um especialista</span>
+      </a>
+    </div>
+    <!-- Wordmark do rodapé: no Figma o preenchimento está transparente (invisível); mantido igual -->
+    <p class="a footer-mark font-tight font-bold leading-[108.8px] text-[68px] text-transparent text-center tracking-[-3.4px] whitespace-nowrap" style="--x:769.24px;--y:609.36px;--w:381px" aria-hidden="true">Abastece<span class="font-black">Aê</span></p>
+  </div>
+</footer>
+
+</div>
+<script>
+  // Fecha o menu mobile ao tocar num link
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('menu-open')));
+  // Encaixa blocos de largura fixa (mockups) na tela do celular
+  function fit() {
+    document.querySelectorAll('[data-fit]').forEach(el => {
+      const w = parseFloat(el.dataset.fit);
+      const cs = getComputedStyle(el.parentElement);
+      const avail = el.parentElement.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      el.style.zoom = window.innerWidth < 1024 ? Math.min(1, avail / w) : '';
+    });
+  }
+  addEventListener('resize', fit); addEventListener('load', fit); fit();
+</script>
+</body>
+</html>
